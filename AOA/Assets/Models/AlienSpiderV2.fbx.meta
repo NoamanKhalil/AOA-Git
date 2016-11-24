@@ -1,0 +1,166 @@
+fileFormatVersion: 2
+guid: 283420a073a7100498708c8c6ea475eb
+timeCreated: 1479847953
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: AlienSpider
+    100002: //RootNode
+    100004: Armature
+    100006: BackLegLeftFoot
+    100008: BackLegLeftFoot_end
+    100010: BackLegLeftLimb1
+    100012: BackLegLeftLimb2
+    100014: BackLegRightFoot
+    100016: BackLegRightFoot_end
+    100018: BackLegRightLimb1
+    100020: BackLegRightLimb2
+    100022: BackLegRoot
+    100024: BackLegRootL
+    100026: BackLegRootR
+    100028: FrontLeftLegFoot
+    100030: FrontLeftLegFoot_end
+    100032: FrontLeftLegLimb1
+    100034: FrontLeftLegLimb2
+    100036: FrontLegRoot
+    100038: FrontRightLegFoot
+    100040: FrontRightLegFoot_end
+    100042: FrontRightLegLimb1
+    100044: FrontRightLegLimb2
+    100046: HeadBone
+    100048: HeadBone_end
+    100050: JawBone1
+    100052: JawBone2
+    100054: JawBone2_end
+    100056: LeftFeelerLimb
+    100058: LeftFeelerLimb_end
+    100060: LeftFeelerRoot
+    100062: NeckBone
+    100064: Right FeelerLimb
+    100066: Right FeelerLimb_end
+    100068: RightFeelerRoot
+    100070: RootBone
+    100072: SideLeftLegFoot
+    100074: SideLeftLegFoot_end
+    100076: SideLeftLegLimb1
+    100078: SideLeftLegLimb2
+    100080: SideLeftLegRoot
+    100082: SideRightLegFoot
+    100084: SideRightLegFoot_end
+    100086: SideRightLegLimb1
+    100088: SideRightLegLimb2
+    100090: SideRightLegRoot
+    400000: AlienSpider
+    400002: //RootNode
+    400004: Armature
+    400006: BackLegLeftFoot
+    400008: BackLegLeftFoot_end
+    400010: BackLegLeftLimb1
+    400012: BackLegLeftLimb2
+    400014: BackLegRightFoot
+    400016: BackLegRightFoot_end
+    400018: BackLegRightLimb1
+    400020: BackLegRightLimb2
+    400022: BackLegRoot
+    400024: BackLegRootL
+    400026: BackLegRootR
+    400028: FrontLeftLegFoot
+    400030: FrontLeftLegFoot_end
+    400032: FrontLeftLegLimb1
+    400034: FrontLeftLegLimb2
+    400036: FrontLegRoot
+    400038: FrontRightLegFoot
+    400040: FrontRightLegFoot_end
+    400042: FrontRightLegLimb1
+    400044: FrontRightLegLimb2
+    400046: HeadBone
+    400048: HeadBone_end
+    400050: JawBone1
+    400052: JawBone2
+    400054: JawBone2_end
+    400056: LeftFeelerLimb
+    400058: LeftFeelerLimb_end
+    400060: LeftFeelerRoot
+    400062: NeckBone
+    400064: Right FeelerLimb
+    400066: Right FeelerLimb_end
+    400068: RightFeelerRoot
+    400070: RootBone
+    400072: SideLeftLegFoot
+    400074: SideLeftLegFoot_end
+    400076: SideLeftLegLimb1
+    400078: SideLeftLegLimb2
+    400080: SideLeftLegRoot
+    400082: SideRightLegFoot
+    400084: SideRightLegFoot_end
+    400086: SideRightLegLimb1
+    400088: SideRightLegLimb2
+    400090: SideRightLegRoot
+    4300000: AlienSpider
+    9500000: //RootNode
+    13700000: AlienSpider
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.63
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15
+    secondaryUVHardAngle: 75
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 50
+    normalImportMode: 1
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: RootBone
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
