@@ -12,6 +12,9 @@ public class FindTurret : NodeCs
 	public GameObject closestTurret = null; 
 	public float closestDistance;
 	public bool hasPath;
+	public float attackRadius = 10f; 
+	public LayerMask turretMask; 
+
 
 	// Use this for initialization
 
@@ -49,6 +52,16 @@ public class FindTurret : NodeCs
 
 			} 
 
+			Collider [] targetsInRange  = Physics.OverlapSphere(ownerTree.transform.position, attackRadius, turretMask);
+
+			if (targetsInRange != null) 
+			{
+				Succeed (); 
+			}
+
+
+
+
 			 
 
 		
@@ -56,7 +69,7 @@ public class FindTurret : NodeCs
 		}
 
 		PathFinding.instance.showMeTheWay (ownerTree.transform, closestTurret.transform);
-		ownerTree.transform.position = Vector3.MoveTowards (ownerTree.transform.position, PathFinding.instance.tempArray [0], 5f * Time.deltaTime);
+		ownerTree.transform.position = Vector3.MoveTowards (ownerTree.transform.position, PathFinding.instance.tempArray[0], 5f * Time.deltaTime);
 		//pathToFollow = instance.tempArray;
 		//instance.showMeTheWay (ownerTree.transform, closestTurret.transform);
 		//pathToFollow = instance.tempArray;

@@ -124,12 +124,12 @@ public class GameManager : MonoBehaviour {
 		//playerHealth = GameObject.Find ("soldierPlayer(Clone)").GetComponent<PlayerOperator> ().getCurrentPlayerHealth ();
 		//playerDefense = GameObject.Find ("soldierPlayer(Clone)").GetComponent<PlayerOperator> ().getCurrentPlayerDefense ();
 
-		healthText.text = ("Health: " + playerHealth);
-		shieldText.text = ("Shield: ") + playerShield;
-		scoreText.text = ("Score: ") + playerScore;
-		survivorsAliveText.text = ("Survivors: ") + playerLives;
+		healthText.text = (""+playerHealth);
+		shieldText.text = ("")+ playerShield;
+		scoreText.text = ("")+playerScore;
+		survivorsAliveText.text =("")+ playerLives;
 		fuelLevelText.text = (wavesRemaining + " Waves to Survive until ship is fueled");
-		creditsText.text = ("Credits: ") + currency;
+		creditsText.text =("")+ currency;
 
 		if (Input.GetKeyDown(KeyCode.Return)) 
 		{

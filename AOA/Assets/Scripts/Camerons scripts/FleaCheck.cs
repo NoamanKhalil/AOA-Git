@@ -5,7 +5,7 @@ public class FleaCheck : NodeCs {
 
 	public override void currentBehaviour () 
 	{
-		if (ownerTree.GetComponent<enemyBehaviour> ().health <= 10) {
+		if (ownerTree.GetComponent<enemyController> ().currentEnemyHealth <= 10) {
 			Succeed ();
 		}
 		else 

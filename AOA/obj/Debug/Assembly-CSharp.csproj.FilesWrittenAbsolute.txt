@@ -64,3 +64,5 @@
 /Users/noamankhalil/Desktop/AOA-Git/AOA/Temp/bin/Debug/Unity.CecilTools.dll
 /Users/noamankhalil/Desktop/AOA-Git/AOA/Temp/bin/Debug/Mono.Cecil.Pdb.dll
 /Users/noamankhalil/Desktop/AOA-Git/AOA/Temp/bin/Debug/Mono.Cecil.Mdb.dll
+/Users/noamankhalil/Desktop/AOA-Git/AOA/Temp/bin/Debug/Assembly-CSharp.dll.mdb
+/Users/noamankhalil/Desktop/AOA-Git/AOA/Temp/bin/Debug/Assembly-CSharp.dll

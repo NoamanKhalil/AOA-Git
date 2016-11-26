@@ -23,7 +23,7 @@ GameObject:
   - 114: {fileID: 114000010421009480}
   - 54: {fileID: 54000013190886414}
   - 65: {fileID: 65000013523149612}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Turret (1)
   m_TagString: Turret
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   - 4: {fileID: 4000013494303978}
   - 33: {fileID: 33000010758283940}
   - 23: {fileID: 23000010991884750}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: sm_platform (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55,7 +55,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000013287445178}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: _B008
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71,7 +71,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000011886090116}
   - 111: {fileID: 111000014168717096}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: RoadBlocker2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89,7 +89,7 @@ GameObject:
   - 33: {fileID: 33000010130484760}
   - 23: {fileID: 23000013377661284}
   - 65: {fileID: 65000012203190396}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: RoadBlocker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -104,7 +104,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000013588690756}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: _B011
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -122,7 +122,7 @@ GameObject:
   - 33: {fileID: 33000013035262292}
   - 23: {fileID: 23000013639728754}
   - 65: {fileID: 65000012427740696}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: RoadBlocker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -137,7 +137,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000010075292192}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: _B009
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -155,7 +155,7 @@ GameObject:
   - 33: {fileID: 33000012175620686}
   - 23: {fileID: 23000011117922164}
   - 65: {fileID: 65000010851767670}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: RoadBlocker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -170,7 +170,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000010459842798}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: _B010
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -186,7 +186,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000012490037482}
   - 111: {fileID: 111000012937326364}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: RoadBlocker2 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -202,7 +202,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000011369287582}
   - 111: {fileID: 111000011178081788}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: RoadBlocker2 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -218,7 +218,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000012273343218}
   - 137: {fileID: 137000013236052556}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Gun_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -233,13 +233,13 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000010311917380}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: WallHolder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1000014245780976
 GameObject:
   m_ObjectHideFlags: 1
@@ -248,7 +248,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000013481020306}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: cannonMuzzle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -348,8 +348,8 @@ Transform:
   m_GameObject: {fileID: 1000010039870786}
   m_LocalRotation: {x: -0, y: -0, z: 1, w: 0}
   m_LocalPosition: {x: -14.1, y: 153, z: 13}
-  m_LocalScale: {x: 1.0000008, y: 1.0000005, z: 1.0000005}
-  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 180}
+  m_LocalScale: {x: 1.0000044, y: 1.0000038, z: 1.0000033}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 317.25598}
   m_Children:
   - {fileID: 4000013287445178}
   - {fileID: 4000012273343218}
@@ -743,7 +743,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectile: {fileID: 1000012116663172, guid: 8d64c618f5678461493aad81521dbb93, type: 2}
-  cannonMuzzle: {fileID: 1000014245780976}
   radius: 30
   layermask:
     serializedVersion: 2

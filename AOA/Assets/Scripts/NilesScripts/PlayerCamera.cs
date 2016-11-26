@@ -13,7 +13,7 @@ public class PlayerCamera : MonoBehaviour {
 	Transform Player;
 
 	void LateUpdate () {
-		Player = GameObject.Find ("soldierPlayer(Clone)").GetComponent<Transform> ();
+		Player = GameObject.FindGameObjectWithTag ("Player").GetComponent<Transform> ();
 		transform.position = new Vector3(Mathf.Clamp(Player.position.x, xMin, xMax), transform.position.y, Mathf.Clamp(Player.position.z-zMDF, zMin, zMax));
 	}
 }

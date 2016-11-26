@@ -30,13 +30,15 @@ public class Attack : NodeCs {
 				closestTurret = turret;
 				closestDistance = turretDistance;
 				Debug.Log ("step 3");
+				//turret.gameObject.GetComponent<TowerBehaviour>().getAndTakeDamage(ownerTree.GetComponent<enemyController>().enemyDamage);
 			}
 
 		}
 
 		if (ownerTree.transform.position == closestTurret.transform.position)
 		{
-			Debug.Log ("ATTACK");
+			closestTurret.gameObject.GetComponent<TowerBehaviour>().getAndTakeDamage(ownerTree.GetComponent<enemyController>().enemyDamage);
+			Debug.Log ("hit");
 		}
 
 

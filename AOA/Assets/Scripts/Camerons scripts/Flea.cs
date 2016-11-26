@@ -10,7 +10,7 @@ public class Flea : NodeCs {
 
 	public override void currentBehaviour () 
 	{
-		GameObject fleaLocation = GameObject.FindGameObjectWithTag ("FleaTo");
+		GameObject fleaLocation = GameObject.FindGameObjectWithTag ("SpawnLocation");
 			
 		PathFinding.instance.showMeTheWay (ownerTree.transform, fleaLocation.transform);
 		ownerTree.transform.position = Vector3.MoveTowards (ownerTree.transform.position, PathFinding.instance.tempArray[0], 15f * Time.deltaTime);

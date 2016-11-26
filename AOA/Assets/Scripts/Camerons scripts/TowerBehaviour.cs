@@ -1,7 +1,11 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
+
+
 public class TowerBehaviour : MonoBehaviour 
-{		
+{	
+	public Image healthBar;
 	public GameObject projectile ; 
 	public float radius = 20.0f;
 	public LayerMask layermask ; 
@@ -12,17 +16,20 @@ public class TowerBehaviour : MonoBehaviour
 	public Transform rotatingPart;
 	public float enemyDistance;
 	public float lookRadius = 30.0f; 
-	public float health; 
-
+	public int health; 
+	public int totalEnemyHealth ;
+	private Transform intRotation ; 
 
 	// Use this for initialization
 	void Start ()
 	{
-		
+		intRotation = this.rotatingPart.transform ; 
+		health = totalEnemyHealth ; 
 	}
 	// Update is called once per frame
 	void Update ()
 	{
+		healthBar.fillAmount = (float)health / totalEnemyHealth;
 		//enemyDistance = Vector3.Distance (transform.position, currentTarget.transform.position); 
 		Vector3 lookPosition = gameObject.transform.position; 
 		Collider[] lookFor = Physics.OverlapSphere (lookPosition, lookRadius, layermask);
@@ -39,10 +46,12 @@ public class TowerBehaviour : MonoBehaviour
 				Vector3 Direction = currentTarget.transform.position - transform.position;
 
 				Quaternion lookAt = Quaternion.LookRotation (Direction);
-				Vector3 Rotation = lookAt.eulerAngles;
+				Vector3 Rotation = Quaternion.Lerp(rotatingPart.rotation,lookAt,Time.deltaTime * 0.2f).eulerAngles;
 				rotatingPart.rotation = Quaternion.Euler (-90, Rotation.y, 0);
 			}
 		}
+		 
+
 		/*if (enemyDistance <= 30f) {
 
 			Vector3 position = gameObject.transform.position; 
@@ -80,6 +89,13 @@ public class TowerBehaviour : MonoBehaviour
 			}
 		}
 	}
+	public void getAndTakeDamage(int dmg)
+	{
+	totalEnemyHealth -= dmg;
+	}
+
+
+
 
 	/*void OnDrawGizmos ()
 	{

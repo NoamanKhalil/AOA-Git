@@ -68,7 +68,7 @@ public class PlayerOperator : MonoBehaviour {
 	}
 
 	// Update is called once per frame
-	void Update () 
+	void FixedUpdate () 
 	{
 		//healthText.text = ("Health: " + currentPlayerHealth);
 		//shieldText.text = ("Shield: ") + playerDefense;

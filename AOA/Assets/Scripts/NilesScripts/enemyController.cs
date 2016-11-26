@@ -3,7 +3,8 @@ using UnityEngine.UI;
 using System.Collections;
 
 
-public class enemyController : MonoBehaviour {
+public class enemyController : MonoBehaviour
+{
 	public Image healthBar;
 	Vector3 enemy;
 
@@ -17,8 +18,8 @@ public class enemyController : MonoBehaviour {
 
 	Vector3 target;
 	Vector3 currentPosition;
-	float baseSpeed;
-	float speedMDF;
+	// float baseSpeed;
+	//float speedMDF;
 
 	int enemyValue;
 	int enemyReward;
@@ -42,7 +43,7 @@ public class enemyController : MonoBehaviour {
 		}
 		else if (target.gameObject.tag == "Turret") 
 		{
-			//target.gameObject.GetComponent<TowerBehaviour>().TakeEnemyDamage(enemyDamage);
+			//target.gameObject.GetComponent<tower>().TakeEnemyDamage(enemyDamage);
 		}
 	}
 

@@ -41,7 +41,11 @@ public class Bullet : MonoBehaviour {
 			activeBullet = false;
 			this.gameObject.GetComponent<Transform> ().position = GameObject.Find ("BulletSpawn").GetComponent<Transform> ().position;
 			liveBulletCount = 0;
+			enemy.gameObject.GetComponentInChildren<Material>().color = Color.red ;
+			Debug.Log ("called");
 		}
+
+
 	}
 
 	// Update is called once per frame

@@ -24,6 +24,7 @@ GameObject:
   - 54: {fileID: 54000013140001416}
   - 135: {fileID: 135000013217553736}
   - 114: {fileID: 114000013388874132}
+  - 96: {fileID: 96000012999391618}
   m_Layer: 11
   m_Name: cannon
   m_TagString: Untagged
@@ -38,8 +39,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012116663172}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -16.052422, y: 0, z: 47.495483}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalPosition: {x: -6.844, y: 0.709, z: 3.422}
+  m_LocalScale: {x: 0.465, y: 0.465, z: 0.465}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
@@ -95,6 +96,56 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!96 &96000012999391618
+TrailRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012116663172}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 96e966fcb9c076049abe269231ea8ca4, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedWireframeHidden: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_Time: 5
+  m_StartWidth: 0.2
+  m_EndWidth: 0.5
+  m_Colors:
+    m_Color[0]:
+      serializedVersion: 2
+      rgba: 4280287483
+    m_Color[1]:
+      serializedVersion: 2
+      rgba: 4278649083
+    m_Color[2]:
+      serializedVersion: 2
+      rgba: 4279200252
+    m_Color[3]:
+      serializedVersion: 2
+      rgba: 4279864573
+    m_Color[4]:
+      serializedVersion: 2
+      rgba: 711166
+  m_MinVertexDistance: 0.1
+  m_Autodestruct: 0
 --- !u!114 &114000013388874132
 MonoBehaviour:
   m_ObjectHideFlags: 1
