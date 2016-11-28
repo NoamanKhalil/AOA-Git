@@ -41,34 +41,29 @@ public class FindTurret : NodeCs
 			foreach (GameObject turret in allTurrets) 
 		    {
 				Debug.Log ("entry");
-				float turretDistance = Vector3.Distance (turret.transform.position,ownerTree.transform.position); 
-				Debug.Log ("step2");
+					float turretDistance = Vector3.Distance (turret.transform.position,ownerTree.transform.position); 
+					Debug.Log ("step2");
 
-			if (turretDistance < closestDistance) {
+				if (turretDistance < closestDistance) {
+					
+					closestTurret = turret;
+					closestDistance = turretDistance;
+					Debug.Log ("step 3");
+
+				} 
+
+				Collider [] targetsInRange  = Physics.OverlapSphere(ownerTree.transform.position, attackRadius, turretMask);
+
+				if (targetsInRange != null) 
+				{
+					Succeed (); 
+				}
 				
-				closestTurret = turret;
-				closestDistance = turretDistance;
-				Debug.Log ("step 3");
-
-			} 
-
-			Collider [] targetsInRange  = Physics.OverlapSphere(ownerTree.transform.position, attackRadius, turretMask);
-
-			if (targetsInRange != null) 
-			{
-				Succeed (); 
+		
 			}
+	
+			PathFinding.instance.showMeTheWay (ownerTree.transform, closestTurret.transform);
 
-
-
-
-			 
-
-		
-		
-		}
-
-		PathFinding.instance.showMeTheWay (ownerTree.transform, closestTurret.transform);
 		ownerTree.transform.position = Vector3.MoveTowards (ownerTree.transform.position, PathFinding.instance.tempArray[0], 5f * Time.deltaTime);
 		//pathToFollow = instance.tempArray;
 		//instance.showMeTheWay (ownerTree.transform, closestTurret.transform);

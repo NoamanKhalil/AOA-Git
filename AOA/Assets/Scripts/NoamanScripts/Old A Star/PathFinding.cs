@@ -11,6 +11,7 @@ public class PathFinding : MonoBehaviour
 
 	public Transform seeker, target;
 	public Vector3[] tempArray ;
+	//public bool pathFound = false ;
 	Grid grid;
 
 	public static PathFinding instance;
@@ -42,7 +43,7 @@ public class PathFinding : MonoBehaviour
 		target= TargetPos ;
 		FindPath(seeker.position,target.position);
 
-
+		//pathFound = true ; 
 		return tempArray ; 
 	}
 

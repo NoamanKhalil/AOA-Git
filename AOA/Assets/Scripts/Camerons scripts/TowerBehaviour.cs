@@ -27,7 +27,7 @@ public class TowerBehaviour : MonoBehaviour
 		health = totalEnemyHealth ; 
 	}
 	// Update is called once per frame
-	void Update ()
+	void FixedUpdate ()
 	{
 		healthBar.fillAmount = (float)health / totalEnemyHealth;
 		//enemyDistance = Vector3.Distance (transform.position, currentTarget.transform.position); 

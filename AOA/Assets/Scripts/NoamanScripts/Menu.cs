@@ -6,7 +6,8 @@ public class Menu : MonoBehaviour {
 
 	public void LoadScene (string xyz)
 	{
-		SceneManager.LoadScene (xyz, LoadSceneMode.Additive);
+		// dont use additive 
+		SceneManager.LoadScene (xyz, LoadSceneMode.Single);
 	}
 
 	public void quit ()

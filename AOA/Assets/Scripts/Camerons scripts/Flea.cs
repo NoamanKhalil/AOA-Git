@@ -12,7 +12,9 @@ public class Flea : NodeCs {
 	{
 		GameObject fleaLocation = GameObject.FindGameObjectWithTag ("SpawnLocation");
 			
-		PathFinding.instance.showMeTheWay (ownerTree.transform, fleaLocation.transform);
+
+			PathFinding.instance.showMeTheWay (ownerTree.transform, fleaLocation.transform);
+
 		ownerTree.transform.position = Vector3.MoveTowards (ownerTree.transform.position, PathFinding.instance.tempArray[0], 15f * Time.deltaTime);
 
 
