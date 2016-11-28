@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/noamanTestScene0.unity
+- path: Assets/Scenes/NoamanTestScene.unity
   isLoaded: 1
   isActive: 1
