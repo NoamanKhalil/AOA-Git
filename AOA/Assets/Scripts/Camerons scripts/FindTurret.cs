@@ -62,7 +62,7 @@ public class FindTurret : NodeCs
 		
 			}
 	
-			PathFinding.instance.showMeTheWay (ownerTree.transform, closestTurret.transform);
+		PathFinding.instance.showMeTheWay (ownerTree.transform, closestTurret.transform);
 
 		ownerTree.transform.position = Vector3.MoveTowards (ownerTree.transform.position, PathFinding.instance.tempArray[0], 5f * Time.deltaTime);
 		//pathToFollow = instance.tempArray;
