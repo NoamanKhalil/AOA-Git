@@ -73,11 +73,11 @@ public class Heap<T>  where T :IHeapItem<T> {
 		//items [currentItemCount] = items ;
 		while (true)
 		{
-			
+
 			T parentItem = items [parentIndex];
 			if (item.CompareTo(parentItem) >0)
 			{
-			//	Debug.Log ("Swapping items ");
+				//	Debug.Log ("Swapping items ");
 				Swap (item, parentItem);
 			}
 			else 
@@ -115,7 +115,7 @@ public class Heap<T>  where T :IHeapItem<T> {
 				// exits  if the parent has a higher priority than its chidlren 
 				else
 				{
-					
+
 					return ;
 				}
 			}
@@ -141,7 +141,7 @@ public class Heap<T>  where T :IHeapItem<T> {
 // interface to inherit from incomaprable which is used to sort & order stuff && it is part of the using namespace 
 // both are of type t / generic 
 public interface IHeapItem<T> : IComparable<T> {
-	 int HeapIndex
+	int HeapIndex
 	{
 		get;
 		set;

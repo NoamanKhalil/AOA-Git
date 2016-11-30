@@ -6,16 +6,24 @@ public class Flea : NodeCs {
 
 	public float closestSpawn = Mathf.Infinity;
 	public bool hasPath;
-
+	public Vector3 [] pathtoFollow ;
+	Vector3 fleeDirection;
+	Vector3 enemyRotation;
+	Quaternion faceTowards;
 
 	public override void currentBehaviour () 
 	{
 		GameObject fleaLocation = GameObject.FindGameObjectWithTag ("SpawnLocation");
 			
 
-			PathFinding.instance.showMeTheWay (ownerTree.transform, fleaLocation.transform);
+		pathtoFollow = PathFinding.instance.showMeTheWay (ownerTree.transform, fleaLocation.transform);
 
-		ownerTree.transform.position = Vector3.MoveTowards (ownerTree.transform.position, PathFinding.instance.tempArray[0], 15f * Time.deltaTime);
+		fleeDirection = fleaLocation.transform.position - ownerTree.transform.position;
+		faceTowards = Quaternion.LookRotation(fleeDirection);
+		enemyRotation = faceTowards.eulerAngles;
+		ownerTree.transform.rotation = Quaternion.Euler(0, enemyRotation.y, 0);	
+
+		ownerTree.transform.position = Vector3.MoveTowards (ownerTree.transform.position, pathtoFollow[0], 15f * Time.deltaTime);
 
 
 	}

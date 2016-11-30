@@ -174,7 +174,6 @@ GameObject:
   - 136: {fileID: 136000010659806798}
   - 114: {fileID: 114000013602539972}
   - 114: {fileID: 114000012400830866}
-  - 114: {fileID: 114000013777831704}
   - 114: {fileID: 114000012492587056}
   m_Layer: 0
   m_Name: Alien_Spider
@@ -1163,19 +1162,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9643a2b9cd8d423492d44dc3fa53cf6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114000013777831704
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000011104520152}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b574964994032d046bacfbee816a8210, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 10045
-  damage: 0
 --- !u!136 &136000010659806798
 CapsuleCollider:
   m_ObjectHideFlags: 1

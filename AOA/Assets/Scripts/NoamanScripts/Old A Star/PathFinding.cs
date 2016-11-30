@@ -20,7 +20,7 @@ public class PathFinding : MonoBehaviour
 	{
 		if (instance == null) 
 		{
-			instance = new PathFinding (); 
+			instance = this ; 
 		} 
 		else 
 		{
@@ -36,8 +36,18 @@ public class PathFinding : MonoBehaviour
 	}
 
 
+
 	public Vector3 [] showMeTheWay (Transform StartPos , Transform TargetPos)
 	{
+		// TODO :  cehck if array is null and return 
+
+		/**
+		 * fhgfhv
+		 * 
+		 * mnvmnb
+		 * 
+		 * 
+		**/
 		grid = GameObject.Find ("GRID").GetComponent<Grid>(); 
 		seeker = StartPos ;
 		target= TargetPos ;
@@ -45,6 +55,7 @@ public class PathFinding : MonoBehaviour
 
 		//pathFound = true ; 
 		return tempArray ; 
+
 	}
 
 	void FindPath(Vector3 startPos, Vector3 targetPos)
@@ -63,7 +74,8 @@ public class PathFinding : MonoBehaviour
 			Node currentNode = openSet.RemoveFirst();
 			closedSet.Add(currentNode);
 			// checks if the current node is the node it eas trying to get to 
-			if (currentNode == targetNode) {
+			if (currentNode == targetNode)
+			{
 				RetracePath(startNode,targetNode);
 				return;
 			}
@@ -105,10 +117,10 @@ public class PathFinding : MonoBehaviour
 				currentNode = currentNode.parent;
 			}
 			Vector3[] waypoints =  SimplifyPath (path);
-		    tempArray = waypoints;
+		   
 			// all nodes are put in the array of vector3 above , this line of code will reverse them in the array named waypoints 
 			Array.Reverse (waypoints);
-
+		    tempArray = waypoints;
 			//returns array of vector3 
 			return waypoints ; 
 		}

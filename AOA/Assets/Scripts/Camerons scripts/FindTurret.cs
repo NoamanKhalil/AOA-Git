@@ -15,21 +15,12 @@ public class FindTurret : NodeCs
 	public float attackRadius = 10f; 
 	public LayerMask turretMask; 
 
-
-	// Use this for initialization
-
-
-	// Update is called once per frame
+	Vector3 turretDirection;
+	Vector3 enemyRotation;
+	Quaternion faceTowards;
 
 	public override void currentBehaviour()
 	{
-		/*if (instance == null) 
-		{
-			instance = new PathFinding();
-		}*/
-
-		//instance = new PathFinding ();
-		
 		closestDistance = Mathf.Infinity;
 
 		Debug.Log ("Find Turret");
@@ -41,6 +32,7 @@ public class FindTurret : NodeCs
 			foreach (GameObject turret in allTurrets) 
 		    {
 				Debug.Log ("entry");
+
 					float turretDistance = Vector3.Distance (turret.transform.position,ownerTree.transform.position); 
 					Debug.Log ("step2");
 
@@ -48,38 +40,41 @@ public class FindTurret : NodeCs
 					
 					closestTurret = turret;
 					closestDistance = turretDistance;
+
 					Debug.Log ("step 3");
 
 				} 
 
-				Collider [] targetsInRange  = Physics.OverlapSphere(ownerTree.transform.position, attackRadius, turretMask);
-
-				if (targetsInRange != null) 
-				{
-					Succeed (); 
-				}
+//				Collider [] targetsInRange  = Physics.OverlapSphere(ownerTree.transform.position, attackRadius, turretMask);
+//
+//				if (targetsInRange != null) 
+//				{
+//					Succeed (); 
+//				}
 				
 		
 			}
+
+		pathToFollow = PathFinding.instance.showMeTheWay  (ownerTree.transform, closestTurret.transform);
+		//Debug.Log(pathToFollow[0]);
+//		for (int i = 1; i < pathToFollow.Length; i++) {
+//			Debug.DrawLine(pathToFollow[i-1],pathToFollow[i]);
+//		}
+//		//To be removed ...... 
+//		pathToFollow = new Vector3[1];
+//		pathToFollow[1]=Vector3.zero;
+//		//end of to be removed 
+
+
+		turretDirection = closestTurret.transform.position - ownerTree.transform.position;
+		faceTowards = Quaternion.LookRotation(turretDirection);
+		enemyRotation = faceTowards.eulerAngles;
+		ownerTree.transform.rotation = Quaternion.Euler(0, enemyRotation.y, 0);
+
+			
+		 ownerTree.transform.position = Vector3.MoveTowards (ownerTree.transform.position, pathToFollow [0], 5f *Time.deltaTime);
+
 	
-		PathFinding.instance.showMeTheWay (ownerTree.transform, closestTurret.transform);
-
-		ownerTree.transform.position = Vector3.MoveTowards (ownerTree.transform.position, PathFinding.instance.tempArray[0], 5f * Time.deltaTime);
-		//pathToFollow = instance.tempArray;
-		//instance.showMeTheWay (ownerTree.transform, closestTurret.transform);
-		//pathToFollow = instance.tempArray;
-
-		//Debug.Log (instance.tempArray);
-
-		//ownerTree.transform.position = Vector3.MoveTowards (ownerTree.transform.position, closestTurret.transform.position, 5f * Time.deltaTime); 
-		/*foreach (Vector3 waypnt in pathToFollow)
-		{
-			//Vector3.MoveTowards(
-			ownerTree.transform.position = Vector3.MoveTowards (ownerTree.transform.position, pathToFollow[count],5f );
-			count++;
-		}*/
-
-
 		Debug.Log ("Step 4");
 
 		if (ownerTree.transform.position == closestTurret.transform.position)
@@ -87,6 +82,7 @@ public class FindTurret : NodeCs
 			Debug.Log ("Step 5");
 			Succeed ();
 		}  
+
 
 
 	}

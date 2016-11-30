@@ -5,7 +5,7 @@ using System.Collections;
 
 public class TowerBehaviour : MonoBehaviour 
 {	
-	public Image healthBar;
+	public GameObject healthBar;
 	public GameObject projectile ; 
 	public float radius = 20.0f;
 	public LayerMask layermask ; 
@@ -19,17 +19,19 @@ public class TowerBehaviour : MonoBehaviour
 	public int health; 
 	public int totalEnemyHealth ;
 	private Transform intRotation ; 
-
+	Renderer rend ; 
 	// Use this for initialization
 	void Start ()
 	{
 		intRotation = this.rotatingPart.transform ; 
 		health = totalEnemyHealth ; 
+		rend =  healthBar.GetComponent<Renderer>(); 
 	}
 	// Update is called once per frame
-	void FixedUpdate ()
+	void  Update ()
 	{
-		healthBar.fillAmount = (float)health / totalEnemyHealth;
+		rend.material.SetColor("_SpecColor", Color.red );
+		//healthBar.fillAmount = (float)health / totalEnemyHealth;
 		//enemyDistance = Vector3.Distance (transform.position, currentTarget.transform.position); 
 		Vector3 lookPosition = gameObject.transform.position; 
 		Collider[] lookFor = Physics.OverlapSphere (lookPosition, lookRadius, layermask);

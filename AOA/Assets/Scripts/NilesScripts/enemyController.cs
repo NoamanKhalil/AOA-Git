@@ -33,6 +33,10 @@ public class enemyController : MonoBehaviour
 	public void getAndTakeDamage(int dmg)
 	{
 		currentEnemyHealth -= dmg;
+		if (currentEnemyHealth <= 0) 
+		{
+			Die ();
+		}
 	}
 
 	void OnCollisionEnter(Collision target)
@@ -70,7 +74,7 @@ public class enemyController : MonoBehaviour
 	// Update is called once per frame
 	void Update () {
 
-		healthBar.fillAmount = (float)currentEnemyHealth / totalEnemyHealth;
+		//healthBar.fillAmount = (float)currentEnemyHealth / totalEnemyHealth;
 		//calcHealth = currentEnemyHealth / totalEnemyHealth;
 		//SetHealthBar (calcHealth);
 
@@ -79,10 +83,7 @@ public class enemyController : MonoBehaviour
 //		target = GameObject.FindGameObjectWithTag("Turret").GetComponent<Transform>().position;
 //
 //		GetComponent<Transform> ().position = Vector3.MoveTowards (currentPosition, target, speedMDF);
-		if (currentEnemyHealth <= 0) 
-		{
-			Die ();
-		}
+
 	
 	}
 }
