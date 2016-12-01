@@ -23,7 +23,7 @@ public class CannonShot : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		liveRoundCount++;
-		if(liveRoundCount == 100)
+		if(liveRoundCount == 50)
 		{
 			Destroy (gameObject);
 		}

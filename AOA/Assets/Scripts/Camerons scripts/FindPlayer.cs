@@ -30,7 +30,10 @@ public class FindPlayer : NodeCs {
 			enemyRotation = faceTowards.eulerAngles;
 			  ownerTree.transform.rotation = Quaternion.Euler(0, enemyRotation.y, 0);	
 
-			ownerTree.transform.position = Vector3.MoveTowards (ownerTree.transform.position, pathToFollow [0], 5f * Time.deltaTime); 
+			if (pathToFollow[0] != pathToFollow [pathToFollow.Length-1])
+			{
+				ownerTree.transform.position = Vector3.MoveTowards (ownerTree.transform.position, pathToFollow [0], 5f *Time.deltaTime);
+			}
 
 
 			Succeed ();

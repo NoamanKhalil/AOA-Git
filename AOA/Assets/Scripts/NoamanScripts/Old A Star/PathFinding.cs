@@ -3,9 +3,14 @@ using System.Collections;
 using System.Collections.Generic;
 using System ; 
 
-// the A* implemented here is based on the article in the website below and is a heavily upgraded implmetaiton of it 
-//http://www.policyalmanac.org/games/aStarTutorial.htm
-// class does pathfinding for the Enemies for the game 
+/**
+ *The A* implemented here is based on the article in the website below and is a heavily upgraded implmetaiton of it 
+ * 
+ * http://www.policyalmanac.org/games/aStarTutorial.htm
+ * 
+ * class does pathfinding for the Enemies for the game 
+**/
+
 public class PathFinding : MonoBehaviour
 {
 
@@ -29,25 +34,12 @@ public class PathFinding : MonoBehaviour
 		//grid = GetComponent<Grid>();
 		//grid = GameObject.Find ("GRID").GetComponent<Grid>(); 
 	}
-
-	void Update()
-	{
-		//FindPath(seeker.position,target.position);
-	}
-
-
-
+	//Method to be called for pathfidning , return a array of vector3s 
 	public Vector3 [] showMeTheWay (Transform StartPos , Transform TargetPos)
 	{
 		// TODO :  cehck if array is null and return 
 
-		/**
-		 * fhgfhv
-		 * 
-		 * mnvmnb
-		 * 
-		 * 
-		**/
+
 		grid = GameObject.Find ("GRID").GetComponent<Grid>(); 
 		seeker = StartPos ;
 		target= TargetPos ;
@@ -73,7 +65,7 @@ public class PathFinding : MonoBehaviour
 		{
 			Node currentNode = openSet.RemoveFirst();
 			closedSet.Add(currentNode);
-			// checks if the current node is the node it eas trying to get to 
+			// checks if the current node is the node it is trying to get to 
 			if (currentNode == targetNode)
 			{
 				RetracePath(startNode,targetNode);

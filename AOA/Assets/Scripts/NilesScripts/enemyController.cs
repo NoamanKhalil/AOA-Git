@@ -5,7 +5,7 @@ using System.Collections;
 
 public class enemyController : MonoBehaviour
 {
-	public Image healthBar;
+	public GameObject healthBar;
 	Vector3 enemy;
 
 	public int currentEnemyHealth;

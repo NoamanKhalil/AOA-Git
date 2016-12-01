@@ -1,247 +1,34 @@
 Base path: /Applications/Unity/Unity.app/Contents
 Cmd: getPlatforms
 Cmd: compileSnippet
-  api=1 type=0 insize=7506 outsize=920 kw=DIRECTIONAL LIGHTMAP_OFF DYNAMICLIGHTMAP_OFF pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING ok=1
-Cmd: disassembleShader
-  api=10 insize=920 outsize=1544 ok=1
+  api=15 type=0 insize=986 outsize=13365 kw=DIRECTIONAL LIGHTMAP_OFF DYNAMICLIGHTMAP_OFF _SPECULARHIGHLIGHTS_OFF _ALPHAPREMULTIPLY_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING SHADER_API_DESKTOP ok=1
 Cmd: compileSnippet
-  api=1 type=0 insize=7506 outsize=1920 kw=DIRECTIONAL SHADOWS_SCREEN LIGHTMAP_OFF DYNAMICLIGHTMAP_OFF VERTEXLIGHT_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING ok=1
-Cmd: disassembleShader
-  api=10 insize=1920 outsize=3214 ok=1
+  api=15 type=1 insize=986 outsize=0 kw=DIRECTIONAL LIGHTMAP_OFF DYNAMICLIGHTMAP_OFF _SPECULARHIGHLIGHTS_OFF _ALPHAPREMULTIPLY_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING SHADER_API_DESKTOP ok=1
 Cmd: compileSnippet
-  api=1 type=1 insize=7506 outsize=3772 kw=DIRECTIONAL LIGHTMAP_OFF DYNAMICLIGHTMAP_OFF pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING ok=1
-Cmd: disassembleShader
-  api=12 insize=3772 outsize=6886 ok=1
+  api=15 type=0 insize=912 outsize=5269 kw=DIRECTIONAL _SPECULARHIGHLIGHTS_OFF _ALPHAPREMULTIPLY_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING SHADER_API_DESKTOP ok=1
 Cmd: compileSnippet
-  api=1 type=0 insize=4310 outsize=644 kw=DIRECTIONAL pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING ok=1
-Cmd: disassembleShader
-  api=10 insize=644 outsize=1086 ok=1
+  api=15 type=1 insize=912 outsize=0 kw=DIRECTIONAL _SPECULARHIGHLIGHTS_OFF _ALPHAPREMULTIPLY_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING SHADER_API_DESKTOP ok=1
 Cmd: compileSnippet
-  api=4 type=0 insize=4310 outsize=1534 kw=DIRECTIONAL SHADOWS_SCREEN pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING ok=1
-Cmd: disassembleShader
-  api=15 insize=1534 outsize=2800 ok=1
+  api=15 type=0 insize=986 outsize=9662 kw=DIRECTIONAL LIGHTMAP_OFF DYNAMICLIGHTMAP_OFF _GLOSSYREFLECTIONS_OFF _SPECULARHIGHLIGHTS_OFF _ALPHAPREMULTIPLY_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING SHADER_API_DESKTOP ok=1
 Cmd: compileSnippet
-  api=4 type=0 insize=4310 outsize=1450 kw=POINT SHADOWS_CUBE SHADOWS_SOFT pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING ok=1
-Cmd: disassembleShader
-  api=15 insize=1450 outsize=2679 ok=1
+  api=15 type=1 insize=986 outsize=0 kw=DIRECTIONAL LIGHTMAP_OFF DYNAMICLIGHTMAP_OFF _GLOSSYREFLECTIONS_OFF _SPECULARHIGHLIGHTS_OFF _ALPHAPREMULTIPLY_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING SHADER_API_DESKTOP ok=1
 Cmd: compileSnippet
-  api=1 type=1 insize=4310 outsize=2256 kw=POINT pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING ok=1
-Cmd: disassembleShader
-  api=12 insize=2256 outsize=4003 ok=1
+  api=15 type=0 insize=986 outsize=9703 kw=DIRECTIONAL LIGHTMAP_OFF DYNAMICLIGHTMAP_OFF _GLOSSYREFLECTIONS_OFF _SPECULARHIGHLIGHTS_OFF _SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A _ALPHAPREMULTIPLY_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING SHADER_API_DESKTOP ok=1
 Cmd: compileSnippet
-  api=1 type=1 insize=4310 outsize=2544 kw=POINT SHADOWS_CUBE pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING ok=1
-Cmd: disassembleShader
-  api=12 insize=2544 outsize=4531 ok=1
+  api=15 type=1 insize=986 outsize=0 kw=DIRECTIONAL LIGHTMAP_OFF DYNAMICLIGHTMAP_OFF _GLOSSYREFLECTIONS_OFF _SPECULARHIGHLIGHTS_OFF _SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A _ALPHAPREMULTIPLY_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING SHADER_API_DESKTOP ok=1
 Cmd: compileSnippet
-  api=1 type=1 insize=4310 outsize=2828 kw=POINT_COOKIE SHADOWS_CUBE SHADOWS_SOFT pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING ok=1
-Cmd: disassembleShader
-  api=12 insize=2828 outsize=5010 ok=1
+  api=15 type=0 insize=912 outsize=5323 kw=DIRECTIONAL _SPECULARHIGHLIGHTS_OFF _SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A _ALPHAPREMULTIPLY_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING SHADER_API_DESKTOP ok=1
 Cmd: compileSnippet
-  api=1 type=0 insize=6616 outsize=920 kw=LIGHTMAP_OFF DYNAMICLIGHTMAP_OFF pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING ok=1
-Cmd: disassembleShader
-  api=10 insize=920 outsize=1544 ok=1
+  api=15 type=1 insize=912 outsize=0 kw=DIRECTIONAL _SPECULARHIGHLIGHTS_OFF _SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A _ALPHAPREMULTIPLY_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING SHADER_API_DESKTOP ok=1
 Cmd: compileSnippet
-  api=1 type=1 insize=6616 outsize=1052 kw=LIGHTMAP_OFF DYNAMICLIGHTMAP_OFF pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING ok=1
-Cmd: disassembleShader
-  api=12 insize=1052 outsize=1992 ok=1
-Cmd: preprocess
-  insize=1850 outsize=1507 ok=1
+  api=15 type=0 insize=986 outsize=9873 kw=DIRECTIONAL LIGHTMAP_OFF DYNAMICLIGHTMAP_OFF _EMISSION _GLOSSYREFLECTIONS_OFF _SPECULARHIGHLIGHTS_OFF _ALPHAPREMULTIPLY_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING SHADER_API_DESKTOP ok=1
 Cmd: compileSnippet
-  api=15 type=0 insize=16623 outsize=14014 kw=DIRECTIONAL LIGHTMAP_OFF DYNAMICLIGHTMAP_OFF pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING SHADER_API_DESKTOP ok=1
+  api=15 type=1 insize=986 outsize=0 kw=DIRECTIONAL LIGHTMAP_OFF DYNAMICLIGHTMAP_OFF _EMISSION _GLOSSYREFLECTIONS_OFF _SPECULARHIGHLIGHTS_OFF _ALPHAPREMULTIPLY_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING SHADER_API_DESKTOP ok=1
 Cmd: compileSnippet
-  api=15 type=1 insize=16623 outsize=0 kw=DIRECTIONAL LIGHTMAP_OFF DYNAMICLIGHTMAP_OFF pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING SHADER_API_DESKTOP ok=1
+  api=15 type=0 insize=986 outsize=9585 kw=DIRECTIONAL LIGHTMAP_OFF DYNAMICLIGHTMAP_OFF _ALPHABLEND_ON _GLOSSYREFLECTIONS_OFF _SPECULARHIGHLIGHTS_OFF pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING SHADER_API_DESKTOP ok=1
 Cmd: compileSnippet
-  api=15 type=0 insize=10183 outsize=7152 kw=POINT pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING SHADER_API_DESKTOP ok=1
+  api=15 type=1 insize=986 outsize=0 kw=DIRECTIONAL LIGHTMAP_OFF DYNAMICLIGHTMAP_OFF _ALPHABLEND_ON _GLOSSYREFLECTIONS_OFF _SPECULARHIGHLIGHTS_OFF pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING SHADER_API_DESKTOP ok=1
 Cmd: compileSnippet
-  api=15 type=1 insize=10183 outsize=0 kw=POINT pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING SHADER_API_DESKTOP ok=1
+  api=15 type=0 insize=912 outsize=5194 kw=DIRECTIONAL _ALPHABLEND_ON _SPECULARHIGHLIGHTS_OFF pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING SHADER_API_DESKTOP ok=1
 Cmd: compileSnippet
-  api=15 type=0 insize=14781 outsize=6769 kw=LIGHTMAP_OFF DYNAMICLIGHTMAP_OFF pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING SHADER_API_DESKTOP ok=1
-Cmd: compileSnippet
-  api=15 type=1 insize=14781 outsize=0 kw=LIGHTMAP_OFF DYNAMICLIGHTMAP_OFF pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING SHADER_API_DESKTOP ok=1
-Cmd: compileSnippet
-  api=15 type=0 insize=8199 outsize=3697 kw=SHADOWS_DEPTH pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING SHADER_API_DESKTOP ok=1
-Cmd: compileSnippet
-  api=15 type=1 insize=8199 outsize=0 kw=SHADOWS_DEPTH pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING SHADER_API_DESKTOP ok=1
-Cmd: compileSnippet
-  api=15 type=0 insize=8808 outsize=3119 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING SHADER_API_DESKTOP ok=1
-Cmd: compileSnippet
-  api=15 type=1 insize=8808 outsize=0 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING SHADER_API_DESKTOP ok=1
-Cmd: preprocess
-  error: 2 plat 18 at (34): Unexpected token '}'. Expected one of: ',' ';'
-  error: 2 plat 18 at (54): Unexpected token inout. Expected: identifier
-  error: 2 plat 18 at (54): Unexpected token void. Expected one of: linear centroid nointerpolation noperspective sample '}' sampler sampler1D sampler2D sampler3D samplerCUBE sampler_state SamplerState SamplerComparisonState or a user-defined type
-  insize=2030 outsize=780 ok=0
-Cmd: preprocess
-  error: 2 plat 18 at (22): Unexpected token '}'. Expected one of: ',' ';'
-  error: 2 plat 18 at (38): Unexpected token inout. Expected: identifier
-  error: 2 plat 18 at (38): Unexpected token void. Expected one of: linear centroid nointerpolation noperspective sample '}' sampler sampler1D sampler2D sampler3D samplerCUBE sampler_state SamplerState SamplerComparisonState or a user-defined type
-  insize=1443 outsize=770 ok=0
-Cmd: preprocess
-  error: 2 plat 18 at (22): Unexpected token '}'. Expected one of: ',' ';'
-  error: 2 plat 18 at (33): Unexpected token inout. Expected: identifier
-  error: 2 plat 18 at (33): Unexpected token void. Expected one of: linear centroid nointerpolation noperspective sample '}' sampler sampler1D sampler2D sampler3D samplerCUBE sampler_state SamplerState SamplerComparisonState or a user-defined type
-  insize=992 outsize=770 ok=0
-Cmd: preprocess
-  error: 2 plat 18 at (36): Unexpected token ';'. Expected one of: ',' ')'
-  error: 2 plat 18 at (37): Unexpected token ')'. Expected one of: ',' ';'
-  insize=993 outsize=549 ok=0
-Cmd: preprocess
-  error: 2 plat 1 at (26): declaration of "_MainTex" conflicts with previous declaration at (25)
-  insize=994 outsize=1489 ok=0
-Cmd: preprocess
-  error: 2 plat 1 at (34): undefined variable "_ColorTint"
-  error: 2 plat 1 at (35): undefined variable "text2D" undefined variable "In"
-  error: 2 plat 1 at (36): undefined variable "text2D" undefined variable "_BumpMap"
-  error: 2 plat 1 at (38): undefined variable "In" unable to find compatible overloaded function "normalize(error)" unable to find compatible overloaded function "dot(error, half3)" unable to find compatible overloaded function "saturate(error)"
-  error: 2 plat 1 at (39): undefined variable "_Rimcolor"
-  insize=972 outsize=1467 ok=0
-Cmd: preprocess
-  error: 2 plat 1 at (34): undefined variable "_ColorTint"
-  error: 2 plat 1 at (35): undefined variable "text2D" undefined variable "In"
-  error: 2 plat 1 at (36): undefined variable "text2D" undefined variable "_BumpMap"
-  error: 2 plat 1 at (38): undefined variable "In" unable to find compatible overloaded function "normalize(error)" unable to find compatible overloaded function "dot(error, half3)" unable to find compatible overloaded function "saturate(error)"
-  error: 2 plat 1 at (39): undefined variable "_Rimcolor"
-  insize=971 outsize=1466 ok=0
-Cmd: preprocess
-  error: 2 plat 1 at (34): undefined variable "_ColorTint"
-  error: 2 plat 1 at (35): undefined variable "text2D" undefined variable "In"
-  error: 2 plat 1 at (36): undefined variable "text2D" undefined variable "_BumpMap"
-  error: 2 plat 1 at (38): undefined variable "In" unable to find compatible overloaded function "normalize(error)" unable to find compatible overloaded function "dot(error, half3)" unable to find compatible overloaded function "saturate(error)"
-  error: 2 plat 1 at (39): undefined variable "_Rimcolor"
-  insize=970 outsize=1465 ok=0
-Cmd: preprocess
-  error: 2 plat 1 at (29): undefined variable "_ColorTint"
-  error: 2 plat 1 at (30): undefined variable "text2D" undefined variable "In"
-  error: 2 plat 1 at (31): undefined variable "text2D" undefined variable "_BumpMap"
-  error: 2 plat 1 at (33): undefined variable "In" unable to find compatible overloaded function "normalize(error)" unable to find compatible overloaded function "dot(error, half3)" unable to find compatible overloaded function "saturate(error)"
-  error: 2 plat 1 at (34): undefined variable "_Rimcolor"
-  insize=929 outsize=1424 ok=0
-Cmd: preprocess
-  error: 2 plat 1 at (29): undefined variable "_ColorTint"
-  error: 2 plat 1 at (30): undefined variable "text2D" undefined variable "In"
-  error: 2 plat 1 at (31): undefined variable "text2D" undefined variable "_BumpMap"
-  error: 2 plat 1 at (33): undefined variable "In" unable to find compatible overloaded function "normalize(error)" unable to find compatible overloaded function "dot(error, half3)" unable to find compatible overloaded function "saturate(error)"
-  insize=929 outsize=1424 ok=0
-Cmd: preprocess
-  error: 2 plat 1 at (29): undefined variable "_ColorTint"
-  error: 2 plat 1 at (30): undefined variable "text2D" undefined variable "In"
-  error: 2 plat 1 at (31): undefined variable "text2D" undefined variable "_BumpMap"
-  insize=928 outsize=1423 ok=0
-Cmd: preprocess
-  error: 2 plat 1 at (29): undefined variable "_ColorTint"
-  error: 2 plat 1 at (30): undefined variable "text2D" undefined variable "In"
-  error: 2 plat 1 at (31): undefined variable "text2D" undefined variable "_BumpMap"
-  insize=931 outsize=1426 ok=0
-Cmd: preprocess
-  error: 2 plat 1 at (29): undefined variable "_ColorTint"
-  error: 2 plat 1 at (30): undefined variable "text2D" undefined variable "In"
-  error: 2 plat 1 at (31): undefined variable "text2D" undefined variable "_BumpMap"
-  insize=931 outsize=1426 ok=0
-Cmd: preprocess
-  error: 2 plat 1 at (29): undefined variable "_ColorTint"
-  error: 2 plat 1 at (30): undefined variable "text2D" undefined variable "In"
-  error: 2 plat 1 at (31): undefined variable "text2D" undefined variable "_BumpMap"
-  insize=931 outsize=1426 ok=0
-Cmd: preprocess
-  error: 2 plat 1 at (29): undefined variable "_ColorTint"
-  error: 2 plat 1 at (30): undefined variable "text2D" undefined variable "In"
-  error: 2 plat 1 at (31): undefined variable "text2D" undefined variable "_BumpMap"
-  insize=931 outsize=1426 ok=0
-Cmd: preprocess
-  error: 2 plat 1 at (29): undefined variable "_ColorTint"
-  error: 2 plat 1 at (30): undefined variable "text2D" undefined variable "In"
-  error: 2 plat 1 at (31): undefined variable "text2D" undefined variable "_BumpMap"
-  insize=940 outsize=1435 ok=0
-Cmd: compileSnippet
-  api=1 type=0 insize=1132 outsize=320 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_HARDWARE_TIER1 ok=1
-Cmd: disassembleShader
-  api=9 insize=320 outsize=549 ok=1
-Cmd: compileSnippet
-  api=1 type=1 insize=1132 outsize=124 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_HARDWARE_TIER2 ok=1
-Cmd: disassembleShader
-  api=11 insize=124 outsize=148 ok=1
-Cmd: preprocess
-  error: 2 plat 1 at (30): undefined variable "_ColorTint"
-  error: 2 plat 1 at (31): undefined variable "text2D" undefined variable "In"
-  error: 2 plat 1 at (32): undefined variable "text2D"
-  insize=962 outsize=1457 ok=0
-Cmd: preprocess
-  error: 2 plat 1 at (33): undefined variable "text2D" undefined variable "In"
-  error: 2 plat 1 at (34): undefined variable "text2D"
-  insize=969 outsize=1464 ok=0
-Cmd: preprocess
-  error: 2 plat 1 at (33): undefined variable "Text2D" undefined variable "In"
-  error: 2 plat 1 at (34): undefined variable "text2D"
-  insize=970 outsize=1465 ok=0
-Cmd: preprocess
-  error: 2 plat 1 at (33): undefined variable "text2D" undefined variable "In"
-  error: 2 plat 1 at (34): undefined variable "text2D"
-  insize=970 outsize=1465 ok=0
-Cmd: preprocess
-  error: 2 plat 1 at (35): undefined variable "text2D" undefined variable "In"
-  error: 2 plat 1 at (36): undefined variable "text2D"
-  insize=976 outsize=1471 ok=0
-Cmd: preprocess
-  error: 2 plat 1 at (35): undefined variable "In" unable to find compatible overloaded function "tex2D(sampler2D, error)"
-  insize=974 outsize=1469 ok=0
-Cmd: preprocess
-  error: 2 plat 1 at (35): undefined variable "In" unable to find compatible overloaded function "tex2D(sampler2D, error)"
-  insize=1041 outsize=1536 ok=0
-Cmd: preprocess
-  insize=1041 outsize=1731 ok=1
-Cmd: compileSnippet
-  api=15 type=0 insize=7887 outsize=6969 kw=DIRECTIONAL LIGHTMAP_OFF DYNAMICLIGHTMAP_OFF pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING SHADER_API_DESKTOP ok=1
-Cmd: compileSnippet
-  api=15 type=1 insize=7887 outsize=0 kw=DIRECTIONAL LIGHTMAP_OFF DYNAMICLIGHTMAP_OFF pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING SHADER_API_DESKTOP ok=1
-Cmd: compileSnippet
-  api=15 type=0 insize=5143 outsize=5213 kw=POINT pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING SHADER_API_DESKTOP ok=1
-Cmd: compileSnippet
-  api=15 type=1 insize=5143 outsize=0 kw=POINT pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING SHADER_API_DESKTOP ok=1
-Cmd: compileSnippet
-  api=15 type=0 insize=4477 outsize=4077 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING SHADER_API_DESKTOP ok=1
-Cmd: compileSnippet
-  api=15 type=1 insize=4477 outsize=0 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING SHADER_API_DESKTOP ok=1
-Cmd: compileSnippet
-  api=15 type=0 insize=7277 outsize=6438 kw=LIGHTMAP_OFF DYNAMICLIGHTMAP_OFF pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING SHADER_API_DESKTOP ok=1
-Cmd: compileSnippet
-  api=15 type=1 insize=7277 outsize=0 kw=LIGHTMAP_OFF DYNAMICLIGHTMAP_OFF pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING SHADER_API_DESKTOP ok=1
-Cmd: compileSnippet
-  api=15 type=0 insize=7636 outsize=6936 kw=LIGHTMAP_OFF DYNAMICLIGHTMAP_OFF pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING SHADER_API_DESKTOP ok=1
-Cmd: compileSnippet
-  api=15 type=1 insize=7636 outsize=0 kw=LIGHTMAP_OFF DYNAMICLIGHTMAP_OFF pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING SHADER_API_DESKTOP ok=1
-Cmd: compileSnippet
-  api=15 type=0 insize=4740 outsize=7136 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING SHADER_API_DESKTOP ok=1
-Cmd: compileSnippet
-  api=15 type=1 insize=4740 outsize=0 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING SHADER_API_DESKTOP ok=1
-Cmd: compileSnippet
-  api=15 type=0 insize=5143 outsize=4462 kw=DIRECTIONAL pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING SHADER_API_DESKTOP ok=1
-Cmd: compileSnippet
-  api=15 type=1 insize=5143 outsize=0 kw=DIRECTIONAL pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING SHADER_API_DESKTOP ok=1
-Cmd: compileSnippet
-  api=15 type=0 insize=7887 outsize=7485 kw=DIRECTIONAL SHADOWS_SCREEN LIGHTMAP_OFF DYNAMICLIGHTMAP_OFF pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING SHADER_API_DESKTOP ok=1
-Cmd: compileSnippet
-  api=15 type=1 insize=7887 outsize=0 kw=DIRECTIONAL SHADOWS_SCREEN LIGHTMAP_OFF DYNAMICLIGHTMAP_OFF pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING SHADER_API_DESKTOP ok=1
-Cmd: compileSnippet
-  api=15 type=0 insize=839 outsize=818 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING SHADER_API_DESKTOP ok=1
-Cmd: compileSnippet
-  api=15 type=1 insize=839 outsize=0 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING SHADER_API_DESKTOP ok=1
-Cmd: compileSnippet
-  api=15 type=0 insize=1011 outsize=1073 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING SHADER_API_DESKTOP ok=1
-Cmd: compileSnippet
-  api=15 type=1 insize=1011 outsize=0 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING SHADER_API_DESKTOP ok=1
-Cmd: compileSnippet
-  api=15 type=0 insize=608 outsize=4034 kw=SHADOWS_DEPTH _ALPHAPREMULTIPLY_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING SHADER_API_DESKTOP ok=1
-Cmd: compileSnippet
-  api=15 type=1 insize=608 outsize=0 kw=SHADOWS_DEPTH _ALPHAPREMULTIPLY_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING SHADER_API_DESKTOP ok=1
-Cmd: compileSnippet
-  api=15 type=0 insize=986 outsize=15118 kw=DIRECTIONAL LIGHTMAP_OFF DYNAMICLIGHTMAP_OFF _EMISSION _ALPHAPREMULTIPLY_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING SHADER_API_DESKTOP ok=1
-Cmd: compileSnippet
-  api=15 type=1 insize=986 outsize=0 kw=DIRECTIONAL LIGHTMAP_OFF DYNAMICLIGHTMAP_OFF _EMISSION _ALPHAPREMULTIPLY_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING SHADER_API_DESKTOP ok=1
-Cmd: compileSnippet
-  api=15 type=0 insize=912 outsize=7193 kw=DIRECTIONAL _ALPHAPREMULTIPLY_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING SHADER_API_DESKTOP ok=1
-Cmd: compileSnippet
-  api=15 type=1 insize=912 outsize=0 kw=DIRECTIONAL _ALPHAPREMULTIPLY_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING SHADER_API_DESKTOP ok=1
-Cmd: compileSnippet
-  api=15 type=0 insize=986 outsize=14907 kw=DIRECTIONAL LIGHTMAP_OFF DYNAMICLIGHTMAP_OFF _ALPHAPREMULTIPLY_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING SHADER_API_DESKTOP ok=1
-Cmd: compileSnippet
-  api=15 type=1 insize=986 outsize=0 kw=DIRECTIONAL LIGHTMAP_OFF DYNAMICLIGHTMAP_OFF _ALPHAPREMULTIPLY_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING SHADER_API_DESKTOP ok=1
+  api=15 type=1 insize=912 outsize=0 kw=DIRECTIONAL _ALPHABLEND_ON _SPECULARHIGHLIGHTS_OFF pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING SHADER_API_DESKTOP ok=1

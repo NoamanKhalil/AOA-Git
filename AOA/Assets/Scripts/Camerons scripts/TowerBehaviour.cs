@@ -30,7 +30,7 @@ public class TowerBehaviour : MonoBehaviour
 	// Update is called once per frame
 	void  Update ()
 	{
-		rend.material.SetColor("_SpecColor", Color.red );
+		rend.material.color = Color.Lerp (Color.green ,Color.red , Mathf.PingPong(Time.time, 1) );
 		//healthBar.fillAmount = (float)health / totalEnemyHealth;
 		//enemyDistance = Vector3.Distance (transform.position, currentTarget.transform.position); 
 		Vector3 lookPosition = gameObject.transform.position; 

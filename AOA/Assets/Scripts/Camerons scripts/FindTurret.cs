@@ -59,11 +59,7 @@ public class FindTurret : NodeCs
 		//Debug.Log(pathToFollow[0]);
 //		for (int i = 1; i < pathToFollow.Length; i++) {
 //			Debug.DrawLine(pathToFollow[i-1],pathToFollow[i]);
-//		}
-//		//To be removed ...... 
-//		pathToFollow = new Vector3[1];
-//		pathToFollow[1]=Vector3.zero;
-//		//end of to be removed 
+
 
 
 		turretDirection = closestTurret.transform.position - ownerTree.transform.position;
@@ -71,8 +67,10 @@ public class FindTurret : NodeCs
 		enemyRotation = faceTowards.eulerAngles;
 		ownerTree.transform.rotation = Quaternion.Euler(0, enemyRotation.y, 0);
 
-			
+		if (pathToFollow[0] != pathToFollow [pathToFollow.Length-1])
+		{
 		 ownerTree.transform.position = Vector3.MoveTowards (ownerTree.transform.position, pathToFollow [0], 5f *Time.deltaTime);
+		}
 
 	
 		Debug.Log ("Step 4");
