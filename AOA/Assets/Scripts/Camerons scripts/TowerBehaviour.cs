@@ -9,6 +9,7 @@ public class TowerBehaviour : MonoBehaviour
 	public GameObject projectile ; 
 	public float radius = 20.0f;
 	public LayerMask layermask ; 
+	public Transform muzzle;
 	public float fireRate = 1.5F;
 	private float nextFire = 0.0F;
 	public float damage = 5f;
@@ -16,8 +17,9 @@ public class TowerBehaviour : MonoBehaviour
 	public Transform rotatingPart;
 	public float enemyDistance;
 	public float lookRadius = 30.0f; 
-	public int health; 
-	public int totalEnemyHealth ;
+	public float health; 
+	public float totalEnemyHealth ;
+	public float healthPercentage ;
 	private Transform intRotation ; 
 	Renderer rend ; 
 	// Use this for initialization
@@ -30,7 +32,8 @@ public class TowerBehaviour : MonoBehaviour
 	// Update is called once per frame
 	void  Update ()
 	{
-		rend.material.color = Color.Lerp (Color.green ,Color.red , Mathf.PingPong(Time.time, 1) );
+		healthPercentage =  health/100; 
+		rend.material.color = Color.Lerp (Color.red ,Color.green , healthPercentage );
 		//healthBar.fillAmount = (float)health / totalEnemyHealth;
 		//enemyDistance = Vector3.Distance (transform.position, currentTarget.transform.position); 
 		Vector3 lookPosition = gameObject.transform.position; 
@@ -48,7 +51,8 @@ public class TowerBehaviour : MonoBehaviour
 				Vector3 Direction = currentTarget.transform.position - transform.position;
 
 				Quaternion lookAt = Quaternion.LookRotation (Direction);
-				Vector3 Rotation = Quaternion.Lerp(rotatingPart.rotation,lookAt,Time.deltaTime * 0.2f).eulerAngles;
+				Vector3 Rotation = Quaternion.Lerp(rotatingPart.rotation,lookAt,Time.deltaTime * 2f).eulerAngles;
+				//rotatingPart.rotation = Quaternion.Euler (90, Rotation.y, 0);
 				rotatingPart.rotation = Quaternion.Euler (-90, Rotation.y, 0);
 			}
 		}
@@ -85,7 +89,7 @@ public class TowerBehaviour : MonoBehaviour
 
 		
 
-				GameObject cannon = Instantiate (projectile, transform.position, Quaternion.identity) as GameObject;
+				GameObject cannon = Instantiate (projectile, muzzle.position, Quaternion.identity) as GameObject;
 				cannon.GetComponent<Rigidbody> ().AddForce (Direction.normalized * 100.0f, ForceMode.Impulse);
 
 			}

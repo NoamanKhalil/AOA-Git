@@ -99,9 +99,9 @@ public class SpawnControllerVeta : MonoBehaviour {
 			//CalculateSpawnDelay ();
 			for (int k = 0; k < waveSize; k++) 
 			{
-				RndChck1 = (int)Random.Range (0.0f, 3.0f);
+				RndChck1 = (int)Random.Range (0.0f, 90.0f);
 			
-				if (RndChck1 == 1) 
+				if (RndChck1 >= 0 && RndChck1 <= 15 ||  RndChck1 >= 76 && RndChck1 <= 90) 
 				{
 					Debug.Log ("Hive: " + RndChck1 + "Active");
 					RndChck2 = (int)Random.Range (0.0f, 2.0f);
@@ -112,7 +112,7 @@ public class SpawnControllerVeta : MonoBehaviour {
 						enemyCount++;
 //					}
 				} 
-				else if (RndChck1 == 2) 
+				else if (RndChck1 >= 16 && RndChck1 <= 30 ||  RndChck1 >= 46 && RndChck1 <= 60) 
 				{
 					Debug.Log ("Hive: " + RndChck1 + "Active");
 					RndChck2 = (int)Random.Range (3.0f, 5.0f);
@@ -123,7 +123,8 @@ public class SpawnControllerVeta : MonoBehaviour {
 						enemyCount++;
 //					}
 				} 
-				else if (RndChck1 == 3) {
+				else if (RndChck1 >= 31 && RndChck1 <= 45 ||  RndChck1 >= 61 && RndChck1 <= 75)
+				{
 					Debug.Log ("Hive: " + RndChck1 + "Active");
 					RndChck2 = (int)Random.Range (6.0f, 8.0f);
 //					if (delay == spawnDelay) {

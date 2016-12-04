@@ -7,6 +7,7 @@ TagManager:
   - Enemy
   - Turret
   - SpawnLocation
+  - Ship
   layers:
   - Default
   - TransparentFX

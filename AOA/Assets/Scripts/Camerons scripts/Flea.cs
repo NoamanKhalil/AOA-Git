@@ -13,7 +13,7 @@ public class Flea : NodeCs {
 
 	public override void currentBehaviour () 
 	{
-		GameObject fleaLocation = GameObject.FindGameObjectWithTag ("SpawnLocation");
+		GameObject fleaLocation = GameObject.FindGameObjectWithTag ("Ship");
 			
 
 		pathtoFollow = PathFinding.instance.showMeTheWay (ownerTree.transform, fleaLocation.transform);
@@ -23,7 +23,11 @@ public class Flea : NodeCs {
 		enemyRotation = faceTowards.eulerAngles;
 		ownerTree.transform.rotation = Quaternion.Euler(0, enemyRotation.y, 0);	
 
-		ownerTree.transform.position = Vector3.MoveTowards (ownerTree.transform.position, pathtoFollow[0], 15f * Time.deltaTime);
+		if (pathtoFollow[0] != pathtoFollow [pathtoFollow.Length-1])
+		{
+			ownerTree.transform.position = Vector3.MoveTowards (ownerTree.transform.position, pathtoFollow [0], 5f *Time.deltaTime);
+		}
+
 
 
 	}

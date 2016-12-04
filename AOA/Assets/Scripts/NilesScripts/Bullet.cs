@@ -14,10 +14,15 @@ public class Bullet : MonoBehaviour {
 	public int bulletID;
 	float bulletStartTime;
 	public int liveBulletCount;
+	public ParticleSystem particleSys ; 
 
 	public bool activeBullet;
 
 	// Use this for initialization
+	void Awake ()
+	{
+		particleSys = GetComponentInChildren<ParticleSystem>();
+	}
 	void Start () {
 		activeBullet = false;
 		//bulletDamage = GameObject.Find("Soldier").GetComponent<PlayerOperator> ().getPlayerDamage();
@@ -39,6 +44,7 @@ public class Bullet : MonoBehaviour {
 	{
 		if (enemy.gameObject.tag == "Enemy") 
 		{
+			particleSys.Play();
 			bulletRend.enabled = false;
 			this.gameObject.GetComponent<Rigidbody> ().Sleep ();
 			enemy.gameObject.GetComponent<enemyController>().getAndTakeDamage(bulletDamage);
@@ -51,6 +57,7 @@ public class Bullet : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
+		//null exception fix
 		firingPosition = GameObject.Find ("Muzzle").GetComponent<Transform> ().position;
 		firingPosition = new Vector3((int)firingPosition.x, 0, (int)firingPosition.z);
 		targetLine = GameObject.Find ("GunTarget").GetComponent<Transform> ().position;

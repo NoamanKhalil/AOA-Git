@@ -5,10 +5,11 @@ public class CannonShot : MonoBehaviour {
 
 	public int cannonDamage;
 	public int liveRoundCount;
-
+	public ParticleSystem particleSys ; 
 	// Use this for initialization
-	void Start () {
-	
+	void Awake ()
+	{
+		particleSys = GetComponentInChildren<ParticleSystem>();
 	}
 
 	void OnCollisionEnter(Collision enemy)
@@ -16,6 +17,7 @@ public class CannonShot : MonoBehaviour {
 		if (enemy.gameObject.tag == "Enemy") 
 		{
 			enemy.gameObject.GetComponent<enemyController>().getAndTakeDamage(cannonDamage);
+			particleSys.Play();
 			Destroy (gameObject);
 		}
 	}

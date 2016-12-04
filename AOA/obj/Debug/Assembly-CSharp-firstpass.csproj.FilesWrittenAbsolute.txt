@@ -1,0 +1,17 @@
+/Users/noamankhalil/Desktop/AOA-Git/AOA/Temp/bin/Debug/Assembly-CSharp-firstpass.dll.mdb
+/Users/noamankhalil/Desktop/AOA-Git/AOA/Temp/bin/Debug/Assembly-CSharp-firstpass.dll
+/Users/noamankhalil/Desktop/AOA-Git/AOA/obj/Debug/Assembly-CSharp-firstpass.dll
+/Users/noamankhalil/Desktop/AOA-Git/AOA/obj/Debug/Assembly-CSharp-firstpass.dll.mdb
+/Users/noamankhalil/Desktop/AOA-Git/AOA/Temp/bin/Debug/UnityEngine.dll
+/Users/noamankhalil/Desktop/AOA-Git/AOA/Temp/bin/Debug/UnityEditor.dll
+/Users/noamankhalil/Desktop/AOA-Git/AOA/Temp/bin/Debug/UnityEngine.UI.dll
+/Users/noamankhalil/Desktop/AOA-Git/AOA/Temp/bin/Debug/UnityEngine.Networking.dll
+/Users/noamankhalil/Desktop/AOA-Git/AOA/Temp/bin/Debug/Mono.Cecil.dll
+/Users/noamankhalil/Desktop/AOA-Git/AOA/Temp/bin/Debug/Unity.SerializationLogic.dll
+/Users/noamankhalil/Desktop/AOA-Git/AOA/Temp/bin/Debug/Unity.DataContract.dll
+/Users/noamankhalil/Desktop/AOA-Git/AOA/Temp/bin/Debug/ICSharpCode.NRefactory.dll
+/Users/noamankhalil/Desktop/AOA-Git/AOA/Temp/bin/Debug/Unity.UNetWeaver.dll
+/Users/noamankhalil/Desktop/AOA-Git/AOA/Temp/bin/Debug/Unity.UNetWeaver.dll.mdb
+/Users/noamankhalil/Desktop/AOA-Git/AOA/Temp/bin/Debug/Unity.CecilTools.dll
+/Users/noamankhalil/Desktop/AOA-Git/AOA/Temp/bin/Debug/Mono.Cecil.Pdb.dll
+/Users/noamankhalil/Desktop/AOA-Git/AOA/Temp/bin/Debug/Mono.Cecil.Mdb.dll

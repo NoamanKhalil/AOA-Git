@@ -14,8 +14,8 @@ using System ;
 public class PathFinding : MonoBehaviour
 {
 
-	public Transform seeker, target;
-	public Vector3[] tempArray ;
+	private Transform seeker, target;
+	private Vector3[] tempArray ;
 	//public bool pathFound = false ;
 	Grid grid;
 
@@ -31,8 +31,6 @@ public class PathFinding : MonoBehaviour
 		{
 			Destroy (this); 
 		}
-		//grid = GetComponent<Grid>();
-		//grid = GameObject.Find ("GRID").GetComponent<Grid>(); 
 	}
 	//Method to be called for pathfidning , return a array of vector3s 
 	public Vector3 [] showMeTheWay (Transform StartPos , Transform TargetPos)
@@ -47,7 +45,6 @@ public class PathFinding : MonoBehaviour
 
 		//pathFound = true ; 
 		return tempArray ; 
-
 	}
 
 	void FindPath(Vector3 startPos, Vector3 targetPos)

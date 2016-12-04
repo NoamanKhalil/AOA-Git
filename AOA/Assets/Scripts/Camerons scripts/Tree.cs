@@ -5,7 +5,7 @@ public class Tree : MonoBehaviour {
 
 	 NodeCs Root;
 	public static PathFinding instance; 
-
+	public float tick = 0.5f;
 
 	// Use this for initialization
 	void Start () {
@@ -52,9 +52,16 @@ public class Tree : MonoBehaviour {
 	}
 
 	// Update is called once per frame
-	void Update () {
+	void Update ()
+	{
+		tick -= Time.time;
 
-		Root.currentBehaviour ();
+		if (tick <= 0) 
+		{
+			
+			Root.currentBehaviour ();
+			tick = 0.5f;
+		}
 
 	}
 }

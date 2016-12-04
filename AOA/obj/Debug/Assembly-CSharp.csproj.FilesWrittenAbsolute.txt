@@ -66,3 +66,5 @@
 /Users/noamankhalil/Desktop/AOA-Git/AOA/Temp/bin/Debug/Mono.Cecil.Mdb.dll
 /Users/noamankhalil/Desktop/AOA-Git/AOA/Temp/bin/Debug/Assembly-CSharp.dll.mdb
 /Users/noamankhalil/Desktop/AOA-Git/AOA/Temp/bin/Debug/Assembly-CSharp.dll
+/Users/noamankhalil/Desktop/AOA-Git/AOA/Temp/bin/Debug/Assembly-CSharp-firstpass.dll
+/Users/noamankhalil/Desktop/AOA-Git/AOA/Temp/bin/Debug/Assembly-CSharp-firstpass.dll.mdb

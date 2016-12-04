@@ -8,9 +8,11 @@ public class enemyController : MonoBehaviour
 	public GameObject healthBar;
 	Vector3 enemy;
 
-	public int currentEnemyHealth;
-	public int totalEnemyHealth;
-	public int calcHealth;
+	public float currentEnemyHealth;
+	public float totalEnemyHealth;
+	public float calcHealth;
+	public float healthPercentage;
+	public ParticleSystem particleSys ; 
 
 	public int enemyDamage;
 	public int enemyDefense;
@@ -24,8 +26,13 @@ public class enemyController : MonoBehaviour
 	int enemyValue;
 	int enemyReward;
 
+	Renderer rend ; 
 	float maxEnemySpeed;
 
+	void Awake() 
+	{
+		particleSys = GetComponentInChildren<ParticleSystem>();
+	}
 	public int getEnemyDamage()
 	{
 		return enemyDamage;
@@ -33,6 +40,8 @@ public class enemyController : MonoBehaviour
 	public void getAndTakeDamage(int dmg)
 	{
 		currentEnemyHealth -= dmg;
+		particleSys.Play();
+		//Instantiate (particleSys , transform.position ,Quaternion.identity );
 		if (currentEnemyHealth <= 0) 
 		{
 			Die ();
@@ -47,7 +56,7 @@ public class enemyController : MonoBehaviour
 		}
 		else if (target.gameObject.tag == "Turret") 
 		{
-			//target.gameObject.GetComponent<tower>().TakeEnemyDamage(enemyDamage);
+			target.gameObject.GetComponent<TowerBehaviour>().getAndTakeDamage(enemyDamage);
 		}
 	}
 
@@ -55,6 +64,7 @@ public class enemyController : MonoBehaviour
 	void Start () {
 		enemyValue = 1000;
 		enemyReward = 100;
+		rend =  healthBar.GetComponent<Renderer>(); 
 		//currentEnemyHealth = totalEnemyHealth;
 		//enemy = GameObject.Find ("Turret").GetComponent<Transform> ().position;
 	}
@@ -72,8 +82,10 @@ public class enemyController : MonoBehaviour
 
 	
 	// Update is called once per frame
-	void Update () {
-
+	void Update () 
+	{
+		healthPercentage =  currentEnemyHealth/100; 
+		rend.material.color = Color.Lerp (Color.red ,Color.green , healthPercentage );
 		//healthBar.fillAmount = (float)currentEnemyHealth / totalEnemyHealth;
 		//calcHealth = currentEnemyHealth / totalEnemyHealth;
 		//SetHealthBar (calcHealth);
