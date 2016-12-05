@@ -20,11 +20,13 @@ public class TowerBehaviour : MonoBehaviour
 	public float health; 
 	public float totalEnemyHealth ;
 	public float healthPercentage ;
-	private Transform intRotation ; 
+	private Transform intRotation ;
+	private GameObject gm ; 
 	Renderer rend ; 
 	// Use this for initialization
 	void Start ()
 	{
+		gm= GameObject.Find ("GameManager");
 		intRotation = this.rotatingPart.transform ; 
 		health = totalEnemyHealth ; 
 		rend =  healthBar.GetComponent<Renderer>(); 
@@ -92,8 +94,20 @@ public class TowerBehaviour : MonoBehaviour
 	{
 	totalEnemyHealth -= dmg;
 	}
-
-
+	void OnTriggerEnter ()
+	{
+		if (gm.GetComponent<GameManager>().upgradeButtonNormal.activeSelf == false)
+		{
+			gm.GetComponent<GameManager>().activateUpgradeButton ();
+		}
+	}
+	void OnTriggerExit ()
+	{
+		if (gm.GetComponent<GameManager>().upgradeButtonNormal.activeSelf == true)
+		{
+		gm.GetComponent<GameManager>().activateUpgradeButton ();
+		}
+	}
 
 
 	/*void OnDrawGizmos ()

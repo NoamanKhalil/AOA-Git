@@ -88,8 +88,8 @@ public class PlayerOperator : MonoBehaviour {
 		healthPercentage =  currentPlayerHealth/100; 
 		shieldPercentage = currentPlayerShield/100;
 
-		rendShield.material.color = Color.Lerp (Color.cyan ,Color.white , healthPercentage );
-		rendHealth.material.color = Color.Lerp (Color.red ,Color.green , shieldPercentage );
+		rendShield.material.color = Color.Lerp (Color.cyan ,Color.white , shieldPercentage );
+		rendHealth.material.color = Color.Lerp (Color.red ,Color.green , healthPercentage );
 
 		if (currentPlayerHealth <= 0)
 		{

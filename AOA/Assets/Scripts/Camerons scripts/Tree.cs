@@ -5,7 +5,7 @@ public class Tree : MonoBehaviour {
 
 	 NodeCs Root;
 	public static PathFinding instance; 
-	public float tick = 0.5f;
+	public float tick = 10.0f;
 
 	// Use this for initialization
 	void Start () {
@@ -60,7 +60,7 @@ public class Tree : MonoBehaviour {
 		{
 			
 			Root.currentBehaviour ();
-			tick = 0.5f;
+			tick = 10.0F;
 		}
 
 	}

@@ -10,6 +10,8 @@ public class GameManager : MonoBehaviour {
 	public Text fuelLevelText;
 	public Text creditsText;
 
+	public GameObject upgradeButtonNormal;
+
 	public int currentWaveNumber;
 	public int currentWave;
 	public int numOfWaves;
@@ -39,6 +41,13 @@ public class GameManager : MonoBehaviour {
 	bool waveActive;
 	public bool playerAlive;
 
+
+	void Awake ()
+	{
+		upgradeButtonNormal.SetActive ( false ); 
+
+	}
+
 	// Use this for initialization
 	void Start () 
 	{
@@ -56,7 +65,6 @@ public class GameManager : MonoBehaviour {
 		waveDelay = 0;
 		playerLives = 3;
 
-
 	}
 
 //	public bool getGameState(bool gameStart)
@@ -64,6 +72,20 @@ public class GameManager : MonoBehaviour {
 //		//Call bool result from menu
 //		return gameStart;
 //	}
+	public void activateUpgradeButton ()
+	{
+
+		if (upgradeButtonNormal.activeSelf == false)
+		{
+			upgradeButtonNormal.SetActive ( true ); 
+		}
+		else if (upgradeButtonNormal.activeSelf == true)
+		{
+			upgradeButtonNormal.SetActive ( false ); 
+		}
+		
+			
+	}
 
 	public int GetCurrentWaveNumber()
 	{

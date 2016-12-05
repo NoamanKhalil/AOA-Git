@@ -20,11 +20,11 @@ public class UpgradeSystem : MonoBehaviour {
 		currentLevel = TurretLevel.Level0;  
 		Debug.Log (currentLevel);
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
 
-		currencyAvailable = GetComponent<GameManager> ().currency; 
+		currencyAvailable = GameObject.Find("GameManager").GetComponent<GameManager> ().currency; 
 
 		switch (levelCase)
 		{
@@ -52,8 +52,7 @@ public class UpgradeSystem : MonoBehaviour {
 			
 
 	}
-
-
+		
 
 	void OnTriggerStay(Collider col)
 	{
