@@ -32,7 +32,7 @@ public class TowerBehaviour : MonoBehaviour
 	// Update is called once per frame
 	void  Update ()
 	{
-		healthPercentage =  health/100; 
+		healthPercentage =  totalEnemyHealth/100; 
 		rend.material.color = Color.Lerp (Color.red ,Color.green , healthPercentage );
 		//healthBar.fillAmount = (float)health / totalEnemyHealth;
 		//enemyDistance = Vector3.Distance (transform.position, currentTarget.transform.position); 
@@ -56,20 +56,13 @@ public class TowerBehaviour : MonoBehaviour
 				rotatingPart.rotation = Quaternion.Euler (-90, Rotation.y, 0);
 			}
 		}
-		 
+		onAttack (); 
+		if (totalEnemyHealth <=0 )
+		{
+			//Destroy(this.gameObject) ; 
 
-		/*if (enemyDistance <= 30f) {
 
-			Vector3 position = gameObject.transform.position; 
-
-			Vector3 Direction = currentTarget.transform.position - transform.position;
-
-			Quaternion lookAt = Quaternion.LookRotation (Direction);
-			Vector3 Rotation = lookAt.eulerAngles;
-			rotatingPart.rotation = Quaternion.Euler (-90, Rotation.y, 0);
-		
-		}*/
-			onAttack (); 
+		}
 		
 	}
 	void onAttack ()

@@ -708,7 +708,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012487660386}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.42838287, y: 0.2, z: -19.353394}
+  m_LocalPosition: {x: 5.8655014, y: -0.0000009536743, z: -13.27845}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -1012,7 +1012,7 @@ Animator:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012487660386}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 60e49e2cd3d2b454fb3597b07b50a21d, type: 3}
   m_Controller: {fileID: 9100000, guid: 479d2cc9e357d42c2911d8f3881826a2, type: 2}
   m_CullingMode: 0
@@ -1051,7 +1051,7 @@ MonoBehaviour:
   healthPercentage: 0
   particleSys: {fileID: 198000010780491808, guid: e9f7730e47d12479391dcff6f82db15a,
     type: 2}
-  enemyDamage: 20
+  enemyDamage: 5
   enemyDefense: 1
   enemySpeed: {x: 0, y: 0, z: 0}
 --- !u!114 &114000014059915714

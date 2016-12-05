@@ -44,21 +44,14 @@ public class FindTurret : NodeCs
 					Debug.Log ("step 3");
 
 				} 
-
-//				Collider [] targetsInRange  = Physics.OverlapSphere(ownerTree.transform.position, attackRadius, turretMask);
-//
-//				if (targetsInRange != null) 
-//				{
-//					Succeed (); 
-//				}
+				
 				
 		
 			}
 
+
+		float distanceToTurret = Vector3.Distance(ownerTree.transform.position, closestTurret.transform.position);
 		pathToFollow = PathFinding.instance.showMeTheWay  (ownerTree.transform, closestTurret.transform);
-		//Debug.Log(pathToFollow[0]);
-//		for (int i = 1; i < pathToFollow.Length; i++) {
-//			Debug.DrawLine(pathToFollow[i-1],pathToFollow[i]);
 
 
 
@@ -67,24 +60,18 @@ public class FindTurret : NodeCs
 		enemyRotation = faceTowards.eulerAngles;
 		ownerTree.transform.rotation = Quaternion.Euler(0, enemyRotation.y, 0);
 
-		if (pathToFollow[0] != pathToFollow [pathToFollow.Length-1])
+		if (pathToFollow[0] != pathToFollow [pathToFollow.Length-1] && distanceToTurret >= 5)
 		{
 		 ownerTree.transform.position = Vector3.MoveTowards (ownerTree.transform.position, pathToFollow [0], 5f *Time.deltaTime);
+			Succeed ();
 		}
 
 	
 		Debug.Log ("Step 4");
 
-		if (ownerTree.transform.position == closestTurret.transform.position)
-		{ 
-			Debug.Log ("Step 5");
-			Succeed ();
-		}  
-
 
 
 	}
-//		Debug.Log (closestDistance);
 }
 
 

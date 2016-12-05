@@ -7,13 +7,15 @@ public class Attack : NodeCs {
 	public float closestDistance; 
 	public GameObject closestTurret; 
 	public bool inRange;
+	public float tick = 75f;
 
 	public override void currentBehaviour () 
 	{
 
 
+		//float distanceToTurret = Vector3.Distance(ownerTree.transform.position, closestTurret.transform.position);
 
-		Debug.Log ("attacknode");
+		//Debug.Log ("attacknode");
 		closestDistance = Mathf.Infinity;
 
 		GameObject[] allTurrets = GameObject.FindGameObjectsWithTag ("Turret");
@@ -21,24 +23,38 @@ public class Attack : NodeCs {
 		foreach (GameObject turret in allTurrets) 
 		{
 			
-			Debug.Log ("Attack");
+			//Debug.Log ("Attack");
 			float turretDistance = Vector3.Distance (turret.transform.position,ownerTree.transform.position); 
-			Debug.Log ("step2");
+			//Debug.Log ("step2");
 
 			if (turretDistance < closestDistance)
 			{
 				closestTurret = turret;
 				closestDistance = turretDistance;
-				Debug.Log ("step 3");
+				//Debug.Log ("step 3");
 				//turret.gameObject.GetComponent<TowerBehaviour>().getAndTakeDamage(ownerTree.GetComponent<enemyController>().enemyDamage);
 			}
 
 		}
 
-		if (ownerTree.transform.position == closestTurret.transform.position)
+		 
+
+		float distanceToTurret = Vector3.Distance(ownerTree.transform.position, closestTurret.transform.position);
+
+		if (distanceToTurret < 5)
 		{
+
+			tick -= Time.time;
+			if (tick <=0)
+			{
 			closestTurret.gameObject.GetComponent<TowerBehaviour>().getAndTakeDamage(ownerTree.GetComponent<enemyController>().enemyDamage);
-			Debug.Log ("hit");
+				tick = 75f ; 
+			}
+			else 
+			{
+				Running ();
+			}
+				
 		}
 
 
@@ -46,6 +62,10 @@ public class Attack : NodeCs {
 
 
 	}
+		
 
 
 }
+
+
+

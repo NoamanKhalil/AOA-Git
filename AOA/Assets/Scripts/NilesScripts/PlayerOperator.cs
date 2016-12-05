@@ -7,6 +7,11 @@ public class PlayerOperator : MonoBehaviour {
 	public Text healthText;
 	public Text shieldText;
 
+	public GameObject health ;
+	public GameObject shield ;
+
+
+
 	public int currentPlayerHealth;
 	public int maxPlayerHealth;
 	public int currentPlayerShield; 
@@ -19,6 +24,11 @@ public class PlayerOperator : MonoBehaviour {
 	public Vector3 cursorPosition;
 	public float playerMaxSpeed = 30.0f;
 
+	float healthPercentage ;
+	float shieldPercentage ;
+
+	Renderer rendShield ; 
+	Renderer rendHealth ; 
 	float gapBetweenPlayerAndMouse;
 	float lookAhead;
 	float h, v;
@@ -28,6 +38,8 @@ public class PlayerOperator : MonoBehaviour {
 	void Start ()
 	{
 		lookAhead = 2; 
+		rendShield =  shield.GetComponent<Renderer>(); 
+		rendHealth =  health.GetComponent<Renderer>(); 
 	}
 
 
@@ -72,6 +84,12 @@ public class PlayerOperator : MonoBehaviour {
 	{
 		//healthText.text = ("Health: " + currentPlayerHealth);
 		//shieldText.text = ("Shield: ") + playerDefense;
+
+		healthPercentage =  currentPlayerHealth/100; 
+		shieldPercentage = currentPlayerShield/100;
+
+		rendShield.material.color = Color.Lerp (Color.cyan ,Color.white , healthPercentage );
+		rendHealth.material.color = Color.Lerp (Color.red ,Color.green , shieldPercentage );
 
 		if (currentPlayerHealth <= 0)
 		{
