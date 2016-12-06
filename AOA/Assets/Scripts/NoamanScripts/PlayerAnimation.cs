@@ -25,7 +25,7 @@ public class PlayerAnimation : MonoBehaviour
 		else if (Input.GetKey (KeyCode.A )  || Input.GetKey (KeyCode.S )|| Input.GetKey (KeyCode.D )|| Input.GetKey (KeyCode.W )   || Input.GetKey (KeyCode.RightArrow )|| Input.GetKey (KeyCode.LeftArrow )|| Input.GetKey (KeyCode.UpArrow )|| Input.GetKey (KeyCode.DownArrow ))
 		{
 			
-				anim.Play ("soldierRun");
+			anim.Play ("soldierRun");
 			
 		}
 		else 

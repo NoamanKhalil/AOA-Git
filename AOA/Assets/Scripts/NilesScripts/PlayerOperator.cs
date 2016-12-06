@@ -4,12 +4,8 @@ using UnityEngine.UI;
 
 public class PlayerOperator : MonoBehaviour {
 
-	public Text healthText;
-	public Text shieldText;
-
 	public GameObject health ;
 	public GameObject shield ;
-
 
 
 	public int currentPlayerHealth;
@@ -22,8 +18,10 @@ public class PlayerOperator : MonoBehaviour {
 	public Vector3 playerSpeed;
 	public Transform muzzlePosition;
 	public Vector3 cursorPosition;
-	public float playerMaxSpeed = 30.0f;
+	public float playerSpdMdf;
+	public float playerMaxSpeed;
 
+	Rigidbody pRB;
 	float healthPercentage ;
 	float shieldPercentage ;
 
@@ -39,10 +37,10 @@ public class PlayerOperator : MonoBehaviour {
 	{
 		lookAhead = 2; 
 		rendShield =  shield.GetComponent<Renderer>(); 
-		rendHealth =  health.GetComponent<Renderer>(); 
+		rendHealth =  health.GetComponent<Renderer>();
+		pRB = GetComponent<Rigidbody> ();
 	}
-
-
+		
 	public int getPlayerDamage()
 	{
 		return playerDamage;
@@ -70,6 +68,7 @@ public class PlayerOperator : MonoBehaviour {
 	{
 		if (Time.timeScale == 1) {
 			GameObject.Find ("BulletSpawn").GetComponent<BulletPooling> ().AccessBullet (muzzlePosition.position);
+			GameObject.Find ("GunShotSource").GetComponent<AudioSource> ().Play();
 		}
 	}
 
@@ -82,17 +81,15 @@ public class PlayerOperator : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-		//healthText.text = ("Health: " + currentPlayerHealth);
-		//shieldText.text = ("Shield: ") + playerDefense;
-
 		healthPercentage =  currentPlayerHealth/100; 
 		shieldPercentage = currentPlayerShield/100;
 
-		rendShield.material.color = Color.Lerp (Color.cyan ,Color.white , shieldPercentage );
-		rendHealth.material.color = Color.Lerp (Color.red ,Color.green , healthPercentage );
+		rendShield.material.color = Color.Lerp (Color.white ,Color.cyan , shieldPercentage );
+		rendHealth.material.color = Color.Lerp (Color.green ,Color.red , healthPercentage );
 
 		if (currentPlayerHealth <= 0)
 		{
+			currentPlayerHealth = 0;
 			Die();
 		}
 
@@ -105,10 +102,18 @@ public class PlayerOperator : MonoBehaviour {
 		h = Input.GetAxis ("Horizontal");
 		v = Input.GetAxis("Vertical");
 
-		playerSpeed = new Vector3 (h, 0, v) * playerMaxSpeed * Time.deltaTime;
 
-		transform.position += playerSpeed;
+		playerSpeed = new Vector3 (h, 0, v);
+//
+//		transform.position += playerSpeed;
 
+		//if (Input.GetKey (KeyCode.W))
+		//{
+			//playerSpeed = transform.forward * playerMaxSpeed * Time.deltaTime;
+			//transform.position += playerSpeed;		
+			//transform.position += transform.forward * Time.deltaTime*playerMaxSpeed;
+		//}
+			
 		if (Input.GetMouseButtonDown(0)) 
 		{
 			Attack ();
@@ -118,5 +123,10 @@ public class PlayerOperator : MonoBehaviour {
 //		{
 //			GameObject.Find("GameManager").GetComponent<GameManager>().SetWaveState();
 //		}
+	}
+	void FixedUpdate()
+	{
+		pRB.AddForce(playerSpeed * playerSpdMdf);
+		pRB.velocity = Vector3.ClampMagnitude(pRB.velocity, playerMaxSpeed);
 	}
 }

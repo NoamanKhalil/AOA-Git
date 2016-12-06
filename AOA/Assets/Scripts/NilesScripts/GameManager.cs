@@ -42,15 +42,16 @@ public class GameManager : MonoBehaviour {
 	public bool playerAlive;
 
 
-	void Awake ()
-	{
-		upgradeButtonNormal.SetActive ( false ); 
-
-	}
+//	void Awake ()
+//	{
+//		upgradeButtonNormal.SetActive ( false ); 
+//
+//	}
 
 	// Use this for initialization
 	void Start () 
 	{
+		upgradeButtonNormal.SetActive ( false ); 
 		gameIsRunning = false;
 		//beginWave = false;
 		isThereAPlayer = false;
@@ -64,6 +65,7 @@ public class GameManager : MonoBehaviour {
 		activeEnemies = 0;
 		waveDelay = 0;
 		playerLives = 3;
+		StartGame();
 
 	}
 
@@ -128,13 +130,18 @@ public class GameManager : MonoBehaviour {
 	public void HandleScoreandCurrency(int pointReward, int cashReward)
 	{
 		scoreAwarded = pointReward / scoreCount;
-		if (scoreAwarded <= 0) {
+		if (scoreAwarded <= 20) {
 			scoreAwarded = 20;
 		}
 		//increase score when enemy dies and decrease enemy count, track how much time passes since wave start and enemies die
 		playerScore += scoreAwarded;
 		currency += cashReward;
 		activeEnemies--;
+	}
+
+	public void DeductCurrency(int Cost)
+	{
+		currency -= Cost;
 	}
 
 

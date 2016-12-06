@@ -62,7 +62,7 @@ public class enemyController : MonoBehaviour
 
 	// Use this for initialization
 	void Start () {
-		enemyValue = 1000;
+		enemyValue = 2000;
 		enemyReward = 100;
 		rend =  healthBar.GetComponent<Renderer>(); 
 		//currentEnemyHealth = totalEnemyHealth;

@@ -48,8 +48,8 @@ public class Bullet : MonoBehaviour {
 			bulletRend.enabled = false;
 			this.gameObject.GetComponent<Rigidbody> ().Sleep ();
 			enemy.gameObject.GetComponent<enemyController>().getAndTakeDamage(bulletDamage);
-			activeBullet = false;
 			this.gameObject.GetComponent<Transform> ().position = GameObject.Find ("BulletSpawn").GetComponent<Transform> ().position;
+			activeBullet = false;
 			liveBulletCount = 0;
 		}
 	}
@@ -94,8 +94,8 @@ public class Bullet : MonoBehaviour {
 			{
 				bulletRend.enabled = false;
 				this.gameObject.GetComponent<Rigidbody> ().Sleep ();
-				activeBullet = false;
 				this.gameObject.GetComponent<Transform> ().position = GameObject.Find ("BulletSpawn").GetComponent<BulletPooling> ().ReturnBullet();
+				activeBullet = false;
 				liveBulletCount = 0;
 
 			}

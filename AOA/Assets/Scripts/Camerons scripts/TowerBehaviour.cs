@@ -18,7 +18,8 @@ public class TowerBehaviour : MonoBehaviour
 	public float enemyDistance;
 	public float lookRadius = 30.0f; 
 	public float health; 
-	public float totalEnemyHealth ;
+	public float currentTurretHealth ;
+	public float totalTurretHealth ;
 	public float healthPercentage ;
 	private Transform intRotation ;
 	private GameObject gm ; 
@@ -27,14 +28,16 @@ public class TowerBehaviour : MonoBehaviour
 	void Start ()
 	{
 		gm= GameObject.Find ("GameManager");
-		intRotation = this.rotatingPart.transform ; 
-		health = totalEnemyHealth ; 
+		intRotation = this.rotatingPart.transform ;
+		totalTurretHealth = 100;
+		currentTurretHealth = totalTurretHealth;
+		health = currentTurretHealth ;
 		rend =  healthBar.GetComponent<Renderer>(); 
 	}
 	// Update is called once per frame
 	void  Update ()
 	{
-		healthPercentage =  totalEnemyHealth/100; 
+		healthPercentage =  currentTurretHealth/totalTurretHealth; 
 		rend.material.color = Color.Lerp (Color.red ,Color.green , healthPercentage );
 		//healthBar.fillAmount = (float)health / totalEnemyHealth;
 		//enemyDistance = Vector3.Distance (transform.position, currentTarget.transform.position); 
@@ -59,7 +62,7 @@ public class TowerBehaviour : MonoBehaviour
 			}
 		}
 		onAttack (); 
-		if (totalEnemyHealth <=0 )
+		if (currentTurretHealth <=0 )
 		{
 			//Destroy(this.gameObject) ; 
 
@@ -92,21 +95,34 @@ public class TowerBehaviour : MonoBehaviour
 	}
 	public void getAndTakeDamage(int dmg)
 	{
-	totalEnemyHealth -= dmg;
+	currentTurretHealth -= dmg;
 	}
-	void OnTriggerEnter ()
+	void OnTriggerEnter (Collider other )
 	{
-		if (gm.GetComponent<GameManager>().upgradeButtonNormal.activeSelf == false)
+		if (other.tag == "Player")
 		{
+			if (gm.GetComponent<GameManager>().upgradeButtonNormal.activeSelf == false)
+			{
+				gm.GetComponent<GameManager>().activateUpgradeButton ();
+				Debug.Log ("Canvas is enabled ");
+			}
+		}
+	
+	}
+	void OnTriggerExit (Collider other)
+	{
+		if (other.tag == "Player")
+		{
+			if (gm.GetComponent<GameManager>().upgradeButtonNormal.activeSelf == true)
+			{
 			gm.GetComponent<GameManager>().activateUpgradeButton ();
+			}
 		}
 	}
-	void OnTriggerExit ()
+
+	public void RepairToFull(float repairCap)
 	{
-		if (gm.GetComponent<GameManager>().upgradeButtonNormal.activeSelf == true)
-		{
-		gm.GetComponent<GameManager>().activateUpgradeButton ();
-		}
+		currentTurretHealth = repairCap;
 	}
 
 
