@@ -34,20 +34,20 @@ public class NodeCs {
 	public void Succeed ()
 	{
 		state = State.Success;
-		Debug.Log ( this.GetType().ToString()+ "successful");
+		//Debug.Log ( this.GetType().ToString()+ "successful");
 	}
 
 	public void Fail()
 	{
 		state = State.Failure;
-		Debug.Log ( this.GetType().ToString()+ "Failed");
+		//Debug.Log ( this.GetType().ToString()+ "Failed");
 
 	}
 
 	public void Running ()
 	{
 		state = State.Running;
-		Debug.Log ( this.GetType().ToString()+ "Running");
+		//Debug.Log ( this.GetType().ToString()+ "Running");
 
 	}
 

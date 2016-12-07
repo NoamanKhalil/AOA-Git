@@ -11,10 +11,12 @@ public class AttackPlayer : NodeCs {
 		float distanceToPlayer = Vector3.Distance (ownerTree.transform.position, player.transform.position);  
 		if (distanceToPlayer < 5)
 		{
+			ownerTree.GetComponent<enemyAnmationController>().onAttack();
 
 			tick -= Time.time;
 			if (tick <=0)
 			{
+				
 				player.gameObject.GetComponent<PlayerOperator>().getAndTakeDamage(ownerTree.GetComponent<enemyController>().enemyDamage);
 				tick = 75f ; 
 			}
@@ -25,6 +27,6 @@ public class AttackPlayer : NodeCs {
 
 		}
 
-		Debug.Log ("Attack");
+//		Debug.Log ("Attack");
 	}
 }

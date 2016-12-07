@@ -26,7 +26,9 @@ public class Flea : NodeCs {
 		ownerTree.transform.rotation = Quaternion.Euler(0, enemyRotation.y, 0);	
 
 		if (pathtoFollow[0] != pathtoFollow [pathtoFollow.Length-1] && distanceToShip >= 10)
+			
 		{
+			ownerTree.GetComponent<enemyAnmationController>().onWalk();
 			ownerTree.transform.position = Vector3.MoveTowards (ownerTree.transform.position, pathtoFollow [0], 5f *Time.deltaTime);
 		}
 

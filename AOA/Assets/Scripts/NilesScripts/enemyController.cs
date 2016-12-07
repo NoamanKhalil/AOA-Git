@@ -48,17 +48,17 @@ public class enemyController : MonoBehaviour
 		}
 	}
 
-	void OnCollisionEnter(Collision target)
-	{
-		if (target.gameObject.tag == "Player") 
-		{
-			target.gameObject.GetComponent<PlayerOperator>().getAndTakeDamage(enemyDamage);
-		}
-		else if (target.gameObject.tag == "Turret") 
-		{
-			target.gameObject.GetComponent<TowerBehaviour>().getAndTakeDamage(enemyDamage);
-		}
-	}
+//	void OnCollisionEnter(Collision target)
+//	{
+//		if (target.gameObject.tag == "Player") 
+//		{
+//			target.gameObject.GetComponent<PlayerOperator>().getAndTakeDamage(enemyDamage);
+//		}
+//		else if (target.gameObject.tag == "Turret") 
+//		{
+//			target.gameObject.GetComponent<TowerBehaviour>().getAndTakeDamage(enemyDamage);
+//		}
+//	}
 
 	// Use this for initialization
 	void Start () {

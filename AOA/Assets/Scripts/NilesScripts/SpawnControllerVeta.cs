@@ -67,7 +67,7 @@ public class SpawnControllerVeta : MonoBehaviour {
 		wave = GetComponent<GameManager>().GetCurrentWaveNumber();
 		//enemyWaveSize = wave * baseWaveSize;
 		enemyWaveSize = baseWaveSize + wave;
-		Debug.Log ("Enemy Wave Size:" + enemyWaveSize);
+		//Debug.Log ("Enemy Wave Size:" + enemyWaveSize);
 		return enemyWaveSize;
 	}
 
@@ -85,13 +85,13 @@ public class SpawnControllerVeta : MonoBehaviour {
 	void Spawn(Vector3 location)
 	{
 		GameObject Alien = (GameObject)Instantiate(alienPrefab, location, Quaternion.identity);
-		Debug.Log ("Alien Spawn");
+		//Debug.Log ("Alien Spawn");
 	}
 		
 	// Update is called once per frame
 	void Update () 
 	{
-		Debug.Log ("Spawner State " + spawnWave);
+		//Debug.Log ("Spawner State " + spawnWave);
 
 		if (spawnWave == true) 
 		{
@@ -103,39 +103,39 @@ public class SpawnControllerVeta : MonoBehaviour {
 			
 				if (RndChck1 >= 0 && RndChck1 <= 15 ||  RndChck1 >= 76 && RndChck1 <= 90) 
 				{
-					Debug.Log ("Hive: " + RndChck1 + "Active");
+					//Debug.Log ("Hive: " + RndChck1 + "Active");
 					RndChck2 = (int)Random.Range (0.0f, 2.0f);
 //					if (delay == spawnDelay) {
 						spawnPoint = spawnLocations [RndChck2];
 						Spawn (spawnPoint);
-						Debug.Log ("Spawned @ Location " + RndChck2);
+						//Debug.Log ("Spawned @ Location " + RndChck2);
 						enemyCount++;
 //					}
 				} 
 				else if (RndChck1 >= 16 && RndChck1 <= 30 ||  RndChck1 >= 46 && RndChck1 <= 60) 
 				{
-					Debug.Log ("Hive: " + RndChck1 + "Active");
+					//Debug.Log ("Hive: " + RndChck1 + "Active");
 					RndChck2 = (int)Random.Range (3.0f, 5.0f);
 //					if (delay == spawnDelay) {
 						spawnPoint = spawnLocations [RndChck2];
 						Spawn (spawnPoint);
-						Debug.Log ("Spawned @ Location " + RndChck2);
+						//Debug.Log ("Spawned @ Location " + RndChck2);
 						enemyCount++;
 //					}
 				} 
 				else if (RndChck1 >= 31 && RndChck1 <= 45 ||  RndChck1 >= 61 && RndChck1 <= 75)
 				{
-					Debug.Log ("Hive: " + RndChck1 + "Active");
+					//Debug.Log ("Hive: " + RndChck1 + "Active");
 					RndChck2 = (int)Random.Range (6.0f, 8.0f);
 //					if (delay == spawnDelay) {
 						spawnPoint = spawnLocations [RndChck2];
 						Spawn (spawnPoint);
-						Debug.Log ("Spawned @ Location " + RndChck2);
+						//Debug.Log ("Spawned @ Location " + RndChck2);
 						enemyCount++;
 //					}
 				}
 
-				Debug.Log ("Complete Run");
+				//Debug.Log ("Complete Run");
 				if (enemyCount == waveSize) 
 				{
 					spawnWave = false;
@@ -144,7 +144,7 @@ public class SpawnControllerVeta : MonoBehaviour {
 				}
 			}
 
-			Debug.Log ("Spawning Completed");
+			//Debug.Log ("Spawning Completed");
 		}
 	}
 }

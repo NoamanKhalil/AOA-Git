@@ -16,11 +16,11 @@ public class FindPlayer : NodeCs {
 		{
 			instance = new PathFinding(); 
 		}*/
-		Debug.Log ("in");
+		//Debug.Log ("in");
 		player = GameObject.FindGameObjectWithTag ("Player"); 
 		if (player != null) 
 		{
-			Debug.Log ("found player");
+			//Debug.Log ("found player");
 
 				
 			pathToFollow = PathFinding.instance.showMeTheWay (ownerTree.transform, player.transform);
@@ -32,6 +32,7 @@ public class FindPlayer : NodeCs {
 
 			if (pathToFollow[0] != pathToFollow [pathToFollow.Length-1])
 			{
+				ownerTree.GetComponent<enemyAnmationController>().onWalk();
 				ownerTree.transform.position = Vector3.MoveTowards (ownerTree.transform.position, pathToFollow [0], 5f *Time.deltaTime);
 			}
 

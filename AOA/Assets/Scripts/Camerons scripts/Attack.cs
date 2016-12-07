@@ -43,16 +43,14 @@ public class Attack : NodeCs {
 
 		if (distanceToTurret < 5)
 		{
-
+			ownerTree.GetComponent<enemyAnmationController>().onAttack();
 			tick -= Time.time;
 			if (tick <=0)
 			{
+
+
 			closestTurret.gameObject.GetComponent<TowerBehaviour>().getAndTakeDamage(ownerTree.GetComponent<enemyController>().enemyDamage);
 				tick = 75f ; 
-			}
-			else 
-			{
-				Running ();
 			}
 				
 		}

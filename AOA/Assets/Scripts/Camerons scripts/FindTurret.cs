@@ -23,7 +23,7 @@ public class FindTurret : NodeCs
 	{
 		closestDistance = Mathf.Infinity;
 
-		Debug.Log ("Find Turret");
+		//Debug.Log ("Find Turret");
 		
 		allTurrets = GameObject.FindGameObjectsWithTag ("Turret");
 
@@ -31,17 +31,17 @@ public class FindTurret : NodeCs
 
 			foreach (GameObject turret in allTurrets) 
 		    {
-				Debug.Log ("entry");
+				//Debug.Log ("entry");
 
 					float turretDistance = Vector3.Distance (turret.transform.position,ownerTree.transform.position); 
-					Debug.Log ("step2");
+					//Debug.Log ("step2");
 
 				if (turretDistance < closestDistance) {
 					
 					closestTurret = turret;
 					closestDistance = turretDistance;
 
-					Debug.Log ("step 3");
+					//Debug.Log ("step 3");
 
 				} 
 				
@@ -62,12 +62,13 @@ public class FindTurret : NodeCs
 
 		if (pathToFollow[0] != pathToFollow [pathToFollow.Length-1] && distanceToTurret >= 5)
 		{
+			ownerTree.GetComponent<enemyAnmationController>().onWalk();
 		 ownerTree.transform.position = Vector3.MoveTowards (ownerTree.transform.position, pathToFollow [0], 5f *Time.deltaTime);
 			Succeed ();
 		}
 
 	
-		Debug.Log ("Step 4");
+		//Debug.Log ("Step 4");
 
 
 

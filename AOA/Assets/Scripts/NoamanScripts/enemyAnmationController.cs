@@ -5,6 +5,7 @@ public class enemyAnmationController : MonoBehaviour {
 
 	Animator anim ; 
 
+	AnimatorStateInfo currentbaseState ;
 	// Use this for initialization
 	void Start () 
 	{
@@ -14,15 +15,19 @@ public class enemyAnmationController : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
 	{
-	
+		currentbaseState = this.anim.GetCurrentAnimatorStateInfo (0);
 	}
 
-	void onAttack ()
+	public void onAttack ()
 	{
-		
+		anim.SetInteger ("Anim" ,  1);
 	}
-	void onWalk ()
+	public void onWalk ()
 	{
-
+		anim.SetInteger ("Anim"  ,  0);
+	}
+	public void onDie ()
+	{
+		anim.SetInteger ("Anim" ,  2);
 	}
 }
