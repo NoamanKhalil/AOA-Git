@@ -2,7 +2,8 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class Grid : MonoBehaviour {
+public class Grid : MonoBehaviour
+{
 
 	public bool onlyDisplayPathGizmos;
 	// to specify which layer is unWalkable 
@@ -84,11 +85,13 @@ public class Grid : MonoBehaviour {
 		return neighbours;
 	}
 
-	// to be used to convert the start and end node positons 
+	// to be used to convert the start and end node positons on the grid of ndoes 
+	//gets the node the start is on 
 	public Node NodeFromWorldPoint(Vector3 worldPosition)
 	{
 		// converts world postion to a percentage  (Both x and y ) and checks how far it is in the grid 
 		//if it is far left it will be a percentage of  0  , middle 0.5 and right a percentage of 1 
+        // how far is it 
 		float percentX = (worldPosition.x + gridWorldSize.x/2) / gridWorldSize.x;
 		float percentY = (worldPosition.z + gridWorldSize.y/2) / gridWorldSize.y;
 		// used to clamp between 0 and 1 
@@ -96,6 +99,8 @@ public class Grid : MonoBehaviour {
 		percentY = Mathf.Clamp01(percentY);
 
 		// rounded to a int so it does not give errors in the array of grid 
+		//reasosn it is -1 is becuase it tries to determine the index in the array of grid 
+
 		int x = Mathf.RoundToInt((gridSizeX-1) * percentX);
 		int y = Mathf.RoundToInt((gridSizeY-1) * percentY);
 		return grid[x,y];

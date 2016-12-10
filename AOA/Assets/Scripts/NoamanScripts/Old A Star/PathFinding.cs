@@ -14,7 +14,7 @@ using System ;
 public class PathFinding : MonoBehaviour
 {
 
-	private Transform seeker, target;
+	public Transform seeker, target;
 	private Vector3[] tempArray ;
 	//public bool pathFound = false ;
 	Grid grid;
@@ -78,7 +78,8 @@ public class PathFinding : MonoBehaviour
 				}
 
 				int newMovementCostToNeighbour = currentNode.gCost + GetDistance(currentNode, neighbour);
-				if (newMovementCostToNeighbour < neighbour.gCost || !openSet.Contains(neighbour)) {
+				if (newMovementCostToNeighbour < neighbour.gCost || !openSet.Contains(neighbour))
+				{
 					neighbour.gCost = newMovementCostToNeighbour;
 					neighbour.hCost = GetDistance(neighbour, targetNode);
 					neighbour.parent = currentNode;
@@ -87,7 +88,7 @@ public class PathFinding : MonoBehaviour
 						openSet.Add(neighbour);
 					else 
 					{
-						//openSet.UpdateItem(neighbour);
+						openSet.UpdateItem(neighbour);
 					}
 				}
 			}
@@ -105,7 +106,7 @@ public class PathFinding : MonoBehaviour
 				path.Add(currentNode);
 				currentNode = currentNode.parent;
 			}
-			Vector3[] waypoints =  SimplifyPath (path);
+		    Vector3[] waypoints = SimplifyPath (path);
 		   
 			// all nodes are put in the array of vector3 above , this line of code will reverse them in the array named waypoints 
 			Array.Reverse (waypoints);
@@ -113,7 +114,7 @@ public class PathFinding : MonoBehaviour
 			//returns array of vector3 
 			return waypoints ; 
 		}
-		// 
+		// converts actual nodes to world postions
 		Vector3 [] SimplifyPath (List <Node> path)
 		{
 			List<Vector3 > waypoints = new List <Vector3>();
@@ -134,10 +135,13 @@ public class PathFinding : MonoBehaviour
 			return waypoints.ToArray ();
 		}
 
+	//calculates distnaces between two nodes
 	int GetDistance(Node nodeA, Node nodeB) {
 		int dstX = Mathf.Abs(nodeA.gridX - nodeB.gridX);
 		int dstY = Mathf.Abs(nodeA.gridY - nodeB.gridY);
 
+
+		// to calculate the movemnt cost IE up down left right is 10 and diagonal is 14
 		if (dstX > dstY)
 			return 14*dstY + 10* (dstX-dstY);
 		return 14*dstX + 10 * (dstY-dstX);

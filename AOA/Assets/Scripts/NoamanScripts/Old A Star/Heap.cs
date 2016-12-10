@@ -64,8 +64,10 @@ public class Heap<T>  where T :IHeapItem<T> {
 	}
 
 
-
 	// method to sort the  open nodes  0 == same weight -1 less wight 1 more weihgt 
+	//Parent = (n-1)/2
+	//Child ledt 2n+1
+	//Child right 2n+1 
 	void SortUp (T item)
 	{
 		int parentIndex = (item.HeapIndex-1)/2;

@@ -62,7 +62,7 @@ public class UpgradeSystem : MonoBehaviour {
 		
 	void OnTriggerStay(Collider col)
 	{
-		if (turret.activeSelf != true)
+		if (turret.active == true)
 		{
 			text.text = "Press \"E\" to upgrade turret\nCredits:"+currencyNeeded + " \n Press \"R\" to repair turret to full. \n Credits: 250"; 
 			if (col.gameObject.tag == "Player") 
@@ -90,18 +90,17 @@ public class UpgradeSystem : MonoBehaviour {
 				}
 			}
 		}
-		else 
+		if (turret.active == false)
 		{
-			if (col.gameObject.tag == "Player" ) 
-			{
-				if (Input.GetKeyUp (KeyCode.E) && currencyAvailable >=currencyNeededToBuild )  
+			text.text = "Credits:"+currencyNeededToBuild+"Build works !"; 
+			    if (Input.GetKeyUp (KeyCode.E) && currencyAvailable >=currencyNeededToBuild )  
 				{
 					GameObject.Find ("GameManager").GetComponent<GameManager> ().DeductCurrency(currencyNeededToBuild);
-					tow.enabled = true ;
+				     tow.isEnabled = true ;
 					turret.SetActive (true); 
 					Debug.Log ("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
 				}
-			}
+		
 		}
 	}
 }

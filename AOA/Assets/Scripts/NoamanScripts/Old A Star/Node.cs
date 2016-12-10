@@ -26,7 +26,6 @@ public class Node : IHeapItem<Node>
 		gridX = _gridX;
 		gridY = _gridY;
 	}
-
 	// calculataes and returns the fcost of the movemnt  which is gcost+fCost
 	// if the nodes have the same costs it will choose the node closest to the endPoint ; 
 	public int fCost

@@ -8,7 +8,7 @@ Material:
   m_PrefabInternal: {fileID: 0}
   m_Name: No Name
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: _EMISSION _NORMALMAP
+  m_ShaderKeywords: _EMISSION
   m_LightmapFlags: 1
   m_CustomRenderQueue: -1
   stringTagMap: {}
@@ -18,7 +18,7 @@ Material:
     - first:
         name: _BumpMap
       second:
-        m_Texture: {fileID: 2800000, guid: 4f73df9b6daacbb4c9e72868d1404be9, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - first:
@@ -48,7 +48,7 @@ Material:
     - first:
         name: _MainTex
       second:
-        m_Texture: {fileID: 2800000, guid: a12f669c2f5b1514c9f06eadaa9ba25e, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - first:
@@ -101,9 +101,6 @@ Material:
         name: _OcclusionStrength
       second: 1
     - first:
-        name: _Outline
-      second: 0.0012
-    - first:
         name: _Parallax
       second: 0.02
     - first:
@@ -124,10 +121,7 @@ Material:
     m_Colors:
     - first:
         name: _Color
-      second: {r: 0.67568177, g: 0, b: 0.022732306, a: 1}
+      second: {r: 1, g: 1, b: 1, a: 1}
     - first:
         name: _EmissionColor
       second: {r: 0, g: 0, b: 0, a: 1}
-    - first:
-        name: _OutlineColor
-      second: {r: 0.95893717, g: 0, b: 0.15111321, a: 1}
