@@ -7,7 +7,7 @@ public class Attack : NodeCs {
 	public float closestDistance; 
 	public GameObject closestTurret; 
 	public bool inRange;
-	public float tick = 75f;
+	public float tick = 300f;
 
 	public override void currentBehaviour () 
 	{
@@ -47,10 +47,8 @@ public class Attack : NodeCs {
 			tick -= Time.time;
 			if (tick <=0)
 			{
-
-
 			closestTurret.gameObject.GetComponent<TowerBehaviour>().getAndTakeDamage(ownerTree.GetComponent<enemyController>().enemyDamage);
-				tick = 75f ; 
+		    tick = 300f ; 
 			}
 				
 		}

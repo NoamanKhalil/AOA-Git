@@ -94,7 +94,7 @@ public class PlayerOperator : MonoBehaviour {
 		}
 
 		//gapBetweenPlayerAndMouse = (this.gameObject.transform.position.z - Camera.main.transform.position.z)*lookAhead;
-		cursorPosition = new Vector3 (Input.mousePosition.x, Input.mousePosition.y, Camera.main.transform.position.y);
+		cursorPosition = new Vector3 (Input.mousePosition.x , Input.mousePosition.y, Camera.main.transform.position.y);
 		cursorPosition = Camera.main.ScreenToWorldPoint (cursorPosition);
 		cursorPosition.y = 0;
 		transform.LookAt (cursorPosition, Vector3.up);
